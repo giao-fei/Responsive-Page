@@ -1,0 +1,4620 @@
+*{
+  margin: 0px;
+  padding: 0px;
+}
+*
+*:after,
+*:before {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+/* 头顶部分  */
+.header{
+	width:100%;
+	height: 60px;
+	display:flex;
+	align-items: center;
+	color:white;
+	background-color:black;
+  justify-content: space-around; 
+}
+.email:hover{
+	cursor: pointer;
+	color:#21C9BE;
+}
+.telephone:hover{
+	cursor: pointer;
+	color:#21C9BE;
+}
+.header .btn {
+	background-color: #21c9be;
+	color: white;
+}
+.login-register a{
+  color:white;
+}
+.login-register a:hover{
+	color:#21c9be;
+	text-decoration: none;
+}
+
+/* 轮播图  */ 
+.slider {
+   display: flex;
+   height:660px;
+   width: 100%;
+/* 让slider div居中，如果是absolute，则没有居中 */
+   position: relative;
+   }    
+/* 让所有的li中的image不显示  */
+.slider li {
+	 margin:55px auto;
+	 position: absolute;
+	 display: none;
+	 width:100%;
+	 }
+.slider img{
+	 width:100%;
+	 height:600px;
+}        
+/* 设置第一个image为block，也就是显示第一个   */ 
+.slider li:first-child {
+	 display: block;
+	 }	
+/* 左右箭头 */
+.arrow-left,.arrow-right {
+	 font-family: "SimSun", "宋体";
+	 width: 30px;                                                   
+	 height: 100px;                                                                         
+	 position: absolute;
+	 cursor: pointer; 
+	 color: lightgray;
+	 top:45%;
+	 font-weight: 150px;
+	 font-size: 70px; 
+	  }      
+.arrow-left {
+	  left: 20px;        
+	  }         
+.arrow-right {
+    right: 20px;
+    }        
+/* 存放切换小图标的div */
+.slider .slider-dot { 
+	  width: 38%; 
+	  height: 8%;
+	  position: absolute;
+	  top: 90%; 
+	  left: 50%; 
+	  bottom: 30px;
+	  }
+.slider-i{
+	  display:inline-block;
+	  cursor: pointer;
+	  width: 15px;
+	  height: 15px;
+	  border-radius: 100%;
+	  background-color:lightgray;
+	  margin-top: 5px;
+	  margin:auto;
+	  margin-left: 20px;
+	  float: left; 
+	  }       
+/* i图标处于放映时的状态   */ 
+.active {background-color: white;} 	
+
+/* 选项卡  */
+.select-card{
+	 box-sizing: border-box;
+	 width:100%;
+	 height:55px;
+	 position: absolute;
+   top:970px;
+}
+.select-card ul{
+	 display: flex;
+	 list-style: none;
+	 justify-content: space-around;
+	 align-content: space-around;
+}
+/* 对ul下的li和a操作  */
+.select-card ul>li{
+	 display: flex;
+	 justify-content: center;
+	 cursor:pointer;
+	 align-items: center;
+	 width:20%;
+	 height:40px;
+	 font-size: 1.5rem;
+	 font-family:"Times New Roman",Times,serif;
+	 border-radius:25px 25px 25px 25px;
+	 border:1px #e7e7e7 solid;
+	 /*transition:0.3s ease-in;*/
+}
+.select-card ul>li span{
+	font-size: 1em;
+}
+.select-card li:hover{
+	 background-color:#21C9BE;
+	 color:white;
+	 transition: 0.5s;
+	 transform:translate3d(-1px,-1px,0);
+   box-shadow: 10px 10px 10px grey;
+}
+.select-card .li{
+	 background-color: #21C9BE;
+	 color:white;
+}
+
+/* 图片部分  */
+.image{
+	 width:100%;
+	 height:530px;
+	 position: absolute;
+   top:1060px;
+}
+.image .main{
+	 display: flex;
+	 list-style: none;
+	 margin:0px;
+	 padding:0px;
+	 width:100%;
+	 height:570px;
+}
+.image .main>li{
+	 width:100%;
+	 height:570px;
+	 display:none;
+	 list-style: none;
+}
+.image .main .first{
+	 display: block;
+}
+.main>li>ul{
+	 width:100%;
+	 height:570px;
+	 list-style: none;
+}
+.main>li>ul>li img{
+	 width:90%;
+	 height:240px;
+	 margin-bottom: 45px;
+	 margin-left:20px;
+	 transition:0.3s ease-in;
+}
+.main>li>ul>li img:hover{
+	 transform:translate3d(-1px,-1px,0);
+   box-shadow: 10px 10px 10px grey;
+}
+.main ul>li a{
+	 outline:none;
+}
+
+ /* 左边div */
+.left{
+	 width:30%;
+	 height:400px;
+	 background-color:#fbfbfb;
+	 display: flex;
+	 justify-content: center;
+	 align-items:center;
+	 
+}
+.left img{
+	 height:70%;
+	 width:70%;
+}
+.right ul>li>ul>li:hover{
+	 background-color:#21C9BE;
+	 transition: 0.5s;
+}
+.right ul>li>ul>li:hover span{
+	 color:white;
+}
+.right ul>li .nav{
+	 background-color:#21C9BE;
+}
+.right ul>li .nav span{
+	 color:white;
+}
+
+/* hdpi */
+@media screen and (max-width:240px ) {
+	 .header{
+	 	   justify-content: space-between;
+	 }
+	 .email,.telephone{
+	 	   display: none;
+	 }
+	 #qqtupian img{
+	   display:none;	
+	 }
+	  /* 导航栏部分*/
+	 .nav-menu{
+	 	 width:100%;
+		 display:flex;
+		 flex-wrap: nowrap;
+		 background-color: lightgray;
+		 height: 68px;
+		 position: fixed;
+		 z-index: 9;
+		}
+	 .nav-menu .img{
+	   width: 40%;
+	   height: 68px;
+	   margin-left: 7px;
+	   display: flex;
+	   justify-content: center;
+	   align-items: center;
+	 }
+	 .nav-menu img{
+	   width: 100%px;
+	   height: 60px;
+	 }
+		  /* 选项卡  */
+	 #nav{
+		 width: 85%;
+		 background-color:lightgray;
+		 border:1px lightgray solid;
+		 margin-top: 17px;
+	 }
+	 #example-navbar-collapse li{
+	   cursor:pointer;
+	 }
+	 #example-navbar-collapse ul{
+     margin-top: 0;
+	   background-color: lightgray;
+	 }
+	 
+   /* 轮播图 */
+   .slider{
+   	  position: relative;
+   	  width:100%;
+   	  height:200px;
+   	  top:-47px;
+   }
+   .slider img{
+	   width:100%;
+	   height:200px;
+   } 
+   /* 左右箭头 */
+   .arrow{
+	   display: block;
+   } 
+   .arrow-left,.arrow-right {                                                                 
+	   position: absolute;
+	   top:80%;
+	   font-size: 40px;
+	 }
+   .arrow-left {
+	   left: 10px;        
+	 }         
+   .arrow-right {
+     right: 0px;
+   }
+   /* 存放切换小图标的div */
+    .slider .slider-dot { 
+	     width: 38%; 
+	     height: 8%;
+	     position: absolute;
+	     top: 235px; 
+	     left: 38%; 
+	  }
+    .slider-i{
+ 		   width: 10px;
+		   height: 10px;
+		   border-radius: 100%;
+		   background-color:lightgray;
+		   margin-top: 5px;
+		   margin:auto;
+		   margin-left: 10px;
+		   float: left; 
+	  }
+	  .active {background-color: white;}    
+	  /* 高校名单 */
+		.list{
+			 position: absolute;
+			 width:100%;
+			 height:250px;
+			 top:270px;
+			 border:1px white solid;
+		}
+		.list ul {
+			 width: 100%;
+			 height: 250px;
+			 display: flex;
+			 flex-wrap: wrap;
+			 justify-content: space-around;
+			 align-items: center;
+			 list-style: none;
+		}
+		.list li{
+			 width: 60px;
+			 height: 60px;
+			 display: flex;
+			 border-radius: 10%; 
+		}
+    #finally{
+    	 display: none;
+    }
+		.list li:active{
+		   box-shadow: 5px 5px 5px grey;
+		}
+		.list img{
+			 width:60px;
+			 height:60px;
+		}
+		.list li a{
+			outline:none;
+		}
+		/* 选项卡  */
+		.select-card{
+			position: absolute;
+			top:530px;
+			height:120px;
+		}
+		.select-card ul{
+			width:100%;
+			height:120px;
+			display: flex;
+			flex-wrap: wrap;
+ 		}
+		.select-card ul>li{
+			width:41%;
+		}
+		.select-card ul>li:active{
+			box-shadow: 5px 5px 5px grey;
+		}
+		.select-card ul>li span{
+			font-size: 0.9em;
+		}
+		.image{
+			position: absolute;
+			top:670px;
+			height:1200px;
+		}
+		.image ul>li>ul{
+			height:1200px;
+		}
+    .image ul>li>ul>li{
+    	width:100%;
+    	height:200px;
+    	margin-left:-20px;
+    }
+		.image ul>li>ul img{
+			width:100%;
+			height:180px;
+		}
+		/* 高考报考 */
+		.Tools-cabinet{
+			width: 100%;
+			height:600px;
+			position: absolute;
+			top:1870px;
+			background-color:#fbfbfb;
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+		}
+		.Tools-cabinet .left{
+			display: none;
+		}
+		.middle .line1,.line2,.line3{
+			display: none;
+		}
+		.middle{
+			width: 100%;
+			height:130px;      
+		}
+		.middle ul{
+			width:100%;
+			height:130px;
+			display: flex;
+			flex-wrap: wrap;
+			list-style: none;
+			justify-content: center;
+		}
+		.middle ul>li{
+			width:100%;
+			height:30px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			border:1px lightgray solid;
+			border-radius: 20px 20px 20px 20px;
+		}
+		/* 中间li的css样式 */
+		.middle .li{
+			 background-color:#21C9BE;
+		}
+		.middle .li span{
+			 color:white;
+		}
+		.right{
+			 width: 100%;
+			 height:470px;
+		}
+		.right ul{
+			 display: flex;
+			 width:100%;
+			 height:470px;
+			 list-style: none;
+		}
+		.right ul>li{
+			 width:100%;
+			 height:470px;
+			 display: none;
+		}
+		.right ul .first{
+			 display: block;
+		}
+		.right ul>li>ul{
+			 width:100%;
+			 height:470px;
+			 list-style: none;
+			 display: flex;
+			 justify-content: space-around;
+			 flex-wrap: wrap;
+		}
+		.right ul>li>ul>li{
+			 cursor: pointer;
+			 width:22%;
+			 height:30px;
+			 border:1px #e7e7e7 solid;
+			 border-radius:10px 10px 10px 10px;
+			 display: flex;
+			 align-items: center;
+			 justify-content: center;
+		}
+		.right #secoend ul{
+			 width:100%;
+			 height:470px;
+		}
+		.right #secoend li{
+			 width:50%;
+			 height:30px;
+		}
+		/* 模态框 */
+
+		.right .first .modal-body{
+			 width:100%;
+			 height:260px;
+		}
+		.right .first .modal-body ul{
+			 width:100%;
+			 height:260px;
+			 display: flex;
+			 flex-wrap: wrap;
+       justify-content: space-around;
+		}
+		.right .first .modal-body ul>li{
+			 width:40%;
+			 height:20px;
+		   border:1px lightgray solid;
+		   border-radius: 10px 10px 10px 10px;
+		   display: flex;
+		   justify-content: center;
+		   align-items: center;
+		}
+		.right .first .modal-body ul #ever-year{
+			 display: none;
+		}
+		.right .first .modal-body ul>li a{
+			 text-decoration: none;
+			 font-size:1.5rem;
+			 font-family: 宋体;
+			 color:black;
+		}
+		/* 高考备考 */
+		.For-reference{
+			width:100%;
+			height:1250px;
+			background-color:#fbfbfb;
+			margin-top:2220px;
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+			align-content: flex-start;
+		} 
+		/* 头部 */
+		.For-reference .tips{
+			width:100%;
+			height:100px;
+      text-align: center;
+      margin-bottom: 20px;
+		}
+		.For-reference .tips h2{
+			font-family: 黑体;
+			font-size: 2em;
+			font-weight: bold;
+			
+		}
+		.For-reference .tips h4{
+			font-size: 1.3em;
+			color: #99999b;
+		}
+		/* 导航栏 */
+		.For-reference .topic{
+			width:95%;
+			height: 1120px;
+		  background-color: white;
+		  display: flex;
+		  flex-wrap: wrap;
+		  justify-content: center;
+		  align-content: flex-start;
+		}
+		.topic .ON1{
+			width: 100%;
+			height:200px;
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+			margin-bottom: 20px;
+		}
+		.topic .ON1 ul{
+			width: 100%;
+			height:200px;
+			list-style: none;
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+      align-content: space-around;
+		}
+		.topic .ON1 ul .li{
+			background-color: #21C9BE;
+		}
+		.topic .ON1 ul .li span{
+			color: white;
+		}
+		.topic .ON1 ul li{
+			width: 100%;
+			height:50px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			cursor: pointer;
+			border-radius: 25px 25px 25px 25px;
+			transition: 0.5s;
+			border: 1px #e7e7e7 solid;
+		}
+		.topic .ON1 li span{
+			color: black;
+			font-family: 华文中宋;
+			font-size: 1.5rem;
+		}
+		/* 第二 */
+		.topic .second{
+			width: 100%;
+			height: 900px;
+			background-color: #fbfbfb;
+		}
+		.topic .second ul{
+			display: flex;
+			width: 100%;
+			height: 900px;
+			list-style: none;
+		}
+		.topic .second ul li{
+			width: 100%;
+			height: 900px;
+		}
+		.topic .second ul>li>ul{
+			display: flex;
+		  flex-wrap: wrap;
+			justify-content: space-around;
+			align-content: space-around;
+			width: 100%;
+			height: 900px;
+		}
+		.topic .second ul>li>ul .nav a{
+			color: #21C9BE;
+		}
+		.topic .second ul>li>ul>li{
+			width: 50%;
+			border-radius: 30px 30px 30px 30px;
+			height: 30px;
+			border: 1px #e7e7e7 solid;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+		.topic .second ul>li>ul>li a{
+			text-decoration: none;
+			color: black;
+		}
+		.topic .second ul>li{
+			display: none;
+		}
+		.topic .second ul .first{
+			display: block;
+		}
+		  /* 友情链接  */
+		.Firendship-connection{
+			width: 100%;
+			height: 1600px;
+			background-color: #fbfbfb;
+		  display: flex;
+		  flex-wrap: wrap;
+		  justify-content: center;
+	    align-content: flex-start;
+		}
+		.Firendship-connection .first{
+			width: 95%;
+			height: 130px;
+			text-align: center;
+		}
+		.Firendship-connection .first h2{
+			font-family: 黑体;
+			font-size: 2.5em;
+			font-weight: bold;
+		}
+		.Firendship-connection .first h4{
+			color: #99999b;
+			font-size: 1.8em;
+		}
+		/* 第二部分  */
+		.Firendship-connection .second{
+			width: 92%;
+			height: 1465px;
+			background-color: white;
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+		}
+		/* 导航栏  */
+		.Firendship-connection .second .nav{
+			width: 100%;
+			height:330px;
+		  background-color: #fbfbfb;
+		  margin-bottom: 10px;
+		}
+		.Firendship-connection .second .nav ul{
+			list-style: none;
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-between;
+			align-content: space-around;
+			width: 100%;
+			height: 330px;
+		}
+		.Firendship-connection .second .nav ul>li{
+			width: 100%;
+			height: 40px;
+			cursor: pointer;
+			border-radius: 25px 25px 25px 25px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			border: 1px #E7E7E7 solid;
+			transition: 0.5s;
+		}
+		.Firendship-connection .second .nav ul>li span{
+			color: #666666;
+			font-size: 1.1em;
+		}
+		.Firendship-connection .second .nav ul .li{
+			background-color: #21C9BE;
+		}
+		.Firendship-connection .second .nav ul .li span{
+			color: white;
+		}
+		/* 主要部分  */
+	  .second .main{
+			width: 100%;
+			height: 1125px;
+			margin: 0px;
+		  padding: 0px;
+		}
+		.second .main ul{
+			width: 100%;
+			height: 1125px;
+			list-style: none;		
+		}
+	  .second .main>ul>li{
+	  	width: 100%;
+	  	height: 1125px;
+	  	display: none;
+	  }
+	   .second .main>ul>.tou{
+	  	display: block;
+	  }
+	  .second .main ul>li>ul{
+	  	width: 100%;
+	  	height: 1125px;
+	  	display: flex;
+	  	flex-wrap: wrap;
+	  	justify-content: space-between;
+	  	align-content: space-around;
+	  }
+	  .second .main ul>li>ul>li{
+	  	width: 100%;
+	  	height: 35px;
+	  	border-radius: 25px 25px 25px 25px;
+	  	border: 1px #e7e7e7 solid;
+	  	display: flex;
+	  	justify-content: center;
+	  	align-items: center;
+	  }
+	  .second .main ul>li>ul>li a{
+	  	text-decoration: none;
+	  	color: #666666;
+	  	font-size: 1em;
+	  }
+	    /* 友情链接  */
+		.Firendship-connection{
+			width: 100%;
+			height: 1580px;
+			background-color: #fbfbfb;
+		  display: flex;
+		  flex-wrap: wrap;
+		  justify-content: center;
+	    align-content: flex-start;
+		}
+		.Firendship-connection .first{
+			width: 95%;
+			height: 110px;
+			text-align: center;
+		}
+		.Firendship-connection .first h2{
+			font-family: 黑体;
+			font-size: 2em;
+			font-weight: bold;
+		}
+		.Firendship-connection .first h4{
+			color: #99999b;
+			font-size: 1.5em;
+		}
+		/* 第二部分  */
+		.Firendship-connection .second{
+			width: 92%;
+			height: 1465px;
+			background-color: white;
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+		}
+		/* 导航栏  */
+		.Firendship-connection .second .nav{
+			width: 100%;
+			height:330px;
+		  background-color: #fbfbfb;
+		  margin-bottom: 10px;
+		}
+		.Firendship-connection .second .nav ul{
+			list-style: none;
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-between;
+			align-content: space-around;
+			width: 100%;
+			height: 330px;
+		}
+		.Firendship-connection .second .nav ul>li{
+			width: 100%;
+			height: 40px;
+			cursor: pointer;
+			border-radius: 25px 25px 25px 25px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			border: 1px #E7E7E7 solid;
+			transition: 0.5s;
+		}
+		.Firendship-connection .second .nav ul>li span{
+			color: #666666;
+			font-size: 1.1em;
+		}
+		.Firendship-connection .second .nav ul .li{
+			background-color: #21C9BE;
+		}
+		.Firendship-connection .second .nav ul .li span{
+			color: white;
+		}
+		/* 主要部分  */
+	  .second .main{
+			width: 100%;
+			height: 1125px;
+			margin: 0px;
+		  padding: 0px;
+		}
+		.second .main ul{
+			width: 100%;
+			height: 1125px;
+			list-style: none;		
+		}
+	  .second .main>ul>li{
+	  	width: 100%;
+	  	height: 1125px;
+	  	display: none;
+	  }
+	   .second .main>ul>.tou{
+	  	display: block;
+	  }
+	  .second .main ul>li>ul{
+	  	width: 100%;
+	  	height: 1125px;
+	  	display: flex;
+	  	flex-wrap: wrap;
+	  	justify-content: space-between;
+	  	align-content: space-around;
+	  }
+	  .second .main ul>li>ul>li{
+	  	width: 100%;
+	  	height: 35px;
+	  	border-radius: 25px 25px 25px 25px;
+	  	border: 1px #e7e7e7 solid;
+	  	display: flex;
+	  	justify-content: center;
+	  	align-items: center;
+	  }
+	  .second .main ul>li>ul>li a{
+	  	text-decoration: none;
+	  	color: #666666;
+	  	font-size: 1em;
+	  }
+	    /* 底部  */
+		.footer{
+		 	width: 100%;
+		 	height: 620px;
+		 	background-color: #fbfbfb;
+		 	display: flex;
+		 	flex-wrap: wrap;
+	    justify-content: center;
+	    align-content: space-between;
+	    
+		}
+		.footer .footer-header{
+		  width: 95%;
+		  height: 560px;
+		}
+		.footer-header .box1{
+		  height: 220px;
+		}
+		.footer-header .box1 p{
+			font-family: 草书;
+		}
+		.footer-header .box2{
+			height: 140px;
+		}
+		.footer-header .box2 .about-us h3{
+			height: 40px;
+			width: 100%;
+			border-bottom: 1.5px lightgray solid;
+		}
+		.footer-header .box2 ul>li{
+			list-style: none;
+	    height: 30px;
+	    margin: 0px;
+	    padding: 0px;
+		}
+		.footer-header .box2 ul>li a{
+			text-decoration: none;
+			color: black;
+			font-family: 草书;
+		}
+		.footer-header .box2 ul>li a:hover{
+			color: #21C9BE;
+		}
+		.footer-header .box3{
+			height: 200px;
+		}
+		.footer-header .box3 .linggao-offical h3{
+			width: 100%;
+			height: 40px;
+			border-bottom: 1.5px lightgray solid;
+		}
+		.footer-header .box3 ul{
+	    width: 100%;
+	    height: 115px;
+	    display: flex;
+		}
+		.footer-header .box3  li{
+			margin: 0px;
+			padding: 0px;
+	    list-style: none;
+		  height: 90px;
+		  
+		}
+	  .footer .footer-down{
+		  width:100%;
+		  height: 50px;
+		  background-color: black;
+		  display: flex;
+		  justify-content: center;
+		  align-items: center;
+		}
+		.footer .footer-down p{
+		  font-size: 13px;
+		  color: #999999;
+		  margin-top: 5px;
+		}		
+}
+
+ /* iphone4、iphone5 */
+@media screen and (max-width:320px) and (min-width: 241px ) {
+	 .header{
+	 	   justify-content: space-between;
+	 }
+	 .email,.telephone{
+	 	   display: none;
+	 }
+	 #qqtupian img{
+	   display:none;	
+	 }
+   /* 导航栏部分*/
+	 .nav-menu{
+	 	 width:100%;
+		 display:flex;
+		 flex-wrap: nowrap;
+		 background-color: lightgray;
+		 height: 68px;
+		 position: fixed;
+		 z-index: 9;
+		}
+	 .nav-menu .img{
+	   width: 30%;
+	   height: 68px;
+	   margin-left: 7px;
+	   display: flex;
+	   justify-content: center;
+	   align-items: center;
+	 }
+	 .nav-menu img{
+	   width: 100%px;
+	   height: 60px;
+	 }
+		  /* 选项卡  */
+	 #nav{
+		 width: 85%;
+		 background-color:lightgray;
+		 border:1px lightgray solid;
+		 margin-top: 17px;
+	 }
+	 #example-navbar-collapse li{
+	   cursor:pointer;
+	 }
+	 #example-navbar-collapse ul{
+     margin-top: 0;
+	   background-color: lightgray;
+	 }
+	 
+   /* 轮播图 */
+   .slider{
+   	  position: relative;
+   	  width:100%;
+   	  height:200px;
+   	  top:-47px;
+   }
+   .slider img{
+	   width:100%;
+	   height:200px;
+   } 
+   /* 左右箭头 */
+   .arrow{
+	   display: block;
+   } 
+   .arrow-left,.arrow-right {                                                                 
+	   position: absolute;
+	   top: 80%;
+	   font-size: 40px; 
+	 }
+   .arrow-left {
+	   left: 10px;        
+	 }         
+   .arrow-right {
+     right: 0px;
+   }
+   /* 存放切换小图标的div */
+   .slider .slider-dot { 
+	     width: 38%; 
+	     height: 8%;
+	     position: absolute;
+	     top: 235px; 
+	     left: 38%; 
+	  }
+  .slider-i{
+ 		   width: 10px;
+		   height: 10px;
+		   border-radius: 100%;
+		   background-color:lightgray;
+		   margin-top: 5px;
+		   margin:auto;
+		   margin-left: 10px;
+		   float: left; 
+	  }
+	  .active {background-color: white;}    
+	  /* 高校名单 */
+		.list{
+			 width:100%;
+			 height:670px;
+			 margin-top: 20px;
+			 display: flex;
+			 justify-content: center;
+		}
+		.list ul {
+			 width: 91%;
+			 height: 670px;
+			 display: flex;
+			 flex-wrap: wrap;
+			 justify-content: space-between;
+			 align-content: space-around;		 
+		}
+		.list li{
+			 width: 35%;
+			 height: 100px;
+			 display: flex;
+			 border-radius: 10%;
+			 margin: 0px;
+			 padding: 0px;	  
+		}
+		.list li:active{
+		   box-shadow: 5px 5px 5px grey;
+		}
+		.list img{
+			 width:100%px;
+			 height:99px;
+			 border-radius: 10%;
+		}
+		.list li a{
+			outline:none;
+		}
+		/* 选项卡 */
+		.select-card{
+			height:120px;
+		}
+		.select-card ul{
+			height:120px;
+			display: flex;
+			flex-wrap: wrap;
+		} 
+		.select-card ul>li{
+			width:40%;
+		}
+		.select-card ul>li:active{
+			box-shadow: 3px 3px 5px 0px grey;
+		}
+		.select-card ul>li span{
+			font-size: 1em;
+		}
+		.image{
+			position: absolute;
+			top:1110px;
+			width:100%;
+			height:1480px;
+		}
+		.image ul>li>ul{
+			height:1480px;
+		}
+    .image ul>li>ul>li{
+    	width:100%;
+    	height:250px;
+    	margin-left:-20px;
+    }
+		.image ul>li>ul img{
+			width:100%;
+			height:220px;
+		}
+		/* 高考报考  */
+		.Tools-cabinet{
+			width:100%;
+			height:600px;
+			position: absolute;
+			top:2610px;
+			background-color:#fbfbfb;
+		}
+		.Tools-cabinet .left{
+			display: none;
+		}
+		.middle .line1,.line2,.line3{
+			display: none;
+		}
+		.middle{
+			width:100%;
+			height:130px;
+      
+		}
+		.middle ul{
+			width:100%;
+			height:130px;
+			display: flex;
+			flex-wrap: wrap;
+			list-style: none;
+			justify-content: center;
+		}
+		.middle ul>li{
+			width:100%;
+			height:30px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			border:1px lightgray solid;
+			border-radius: 20px 20px 20px 20px;
+		}
+		/* 中间li的css样式 */
+		.middle .li{
+			 background-color:#21C9BE;
+		}
+		.middle .li span{
+			 color:white;
+		}
+		.right{
+			 width:100%;
+			 height:470px;
+			 
+		}
+		.right ul{
+			 display: flex;
+			 width:100%;
+			 height:470px;
+			 list-style: none;
+		}
+		.right ul>li{
+			 width:100%;
+			 height:470px;
+			 display: none;
+		}
+		.right ul .first{
+			 display: block;
+		}
+		.right ul>li>ul{
+			 width:100%;
+			 height:470px;
+			 list-style: none;
+			 display: flex;
+			 justify-content: space-around;
+			 flex-wrap: wrap;
+		}
+		.right ul>li>ul>li{
+			 cursor: pointer;
+			 width:22%;
+			 height:30px;
+			 border:1px #e7e7e7 solid;
+			 border-radius:10px 10px 10px 10px;
+			 display: flex;
+			 align-items: center;
+			 justify-content: center;
+		}
+		.right #secoend ul{
+			 width:100%;
+			 height:470px;
+		}
+		.right #secoend li{
+			 width:50%;
+			 height:30px;
+		}
+		/* 模态框 */
+		.right .first .modal-body{
+			 width:100%;
+			 height:300px;
+		}
+		.right .first .modal-body ul{
+			 width:100%;
+			 height:280px;
+			 display: flex;
+			 flex-wrap: wrap;
+       justify-content: space-around;
+		}
+		.right .first .modal-body ul>li{
+			 width:40%;
+			 height:30px;
+		   border:1px lightgray solid;
+		   border-radius: 15px 15px 15px 15px;
+		   display: flex;
+		   justify-content: center;
+		   align-items: center;
+		}
+		.right .first .modal-body ul #ever-year{
+			 display: none;
+		}
+		.right .first .modal-body ul>li a{
+			 text-decoration: none;
+			 font-size:1.5rem;
+			 font-family: 宋体;
+			 color:black;
+		}
+		/* 高考备考 */
+		.For-reference{
+			width:100%;
+			height:1250px;
+			background-color:#fbfbfb;
+			margin-top:2260px;
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+			align-content: flex-start;
+		} 
+		/* 头部 */
+		.For-reference .tips{
+			width:99%;
+			height:100px;
+      text-align: center;
+      margin-bottom: 10px;
+		}
+		.For-reference .tips h2{
+			font-family: 黑体;
+			font-size: 2em;
+			font-weight: bold;
+			
+		}
+		.For-reference .tips h4{
+			font-size: 1.3em;
+			color: #99999b;
+		}
+		/* 导航栏 */
+		.For-reference .topic{
+			width:95%;
+			height: 1130px;
+		  background-color: white;
+		  display: flex;
+		  flex-wrap: wrap;
+		  justify-content: center;
+		  align-content: flex-start;
+		}
+		.topic .ON1{
+			width: 100%;
+			height:200px;
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+			margin-bottom: 5px;
+		}
+		.topic .ON1 ul{
+			width: 100%;
+			height:200px;
+			list-style: none;
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+      align-content: space-around;
+		}
+		.topic .ON1 ul .li{
+			background-color: #21C9BE;
+		}
+		.topic .ON1 ul .li span{
+			color: white;
+		}
+		.topic .ON1 ul li{
+			width: 100%;
+			height:40px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			cursor: pointer;
+			border-radius: 25px 25px 25px 25px;
+			transition: 0.5s;
+			border: 1px #e7e7e7 solid;
+		}
+		.topic .ON1 li span{
+			color: black;
+			font-family: 华文中宋;
+			font-size: 1.5rem;
+		}
+		/* 第二 */
+		.topic .second{
+			width: 100%;
+			height: 920px;
+			background-color: #fbfbfb;
+		}
+		.topic .second ul{
+			display: flex;
+			width: 100%;
+			height: 920px;
+			list-style: none;
+		}
+		.topic .second ul li{
+			width: 100%;
+			height: 920px;
+		}
+		.topic .second ul>li>ul{
+			display: flex;
+		  flex-wrap: wrap;
+			justify-content: space-around;
+			align-content: space-around;
+			width: 100%;
+			height: 920px;
+		}
+		.topic .second ul>li>ul .nav a{
+			color: #21C9BE;
+		}
+		.topic .second ul>li>ul>li{
+			width: 49%;
+			border-radius: 30px 30px 30px 30px;
+			height: 30px;
+			border: 1px #e7e7e7 solid;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+		.topic .second ul>li>ul>li a{
+			text-decoration: none;
+			color: black;
+		}
+		.topic .second ul>li{
+			display: none;
+		}
+		.topic .second ul .first{
+			display: block;
+		}
+		  /* 友情链接  */
+		.Firendship-connection{
+			width: 100%;
+			height: 1600px;
+			background-color: #fbfbfb;
+		  display: flex;
+		  flex-wrap: wrap;
+		  justify-content: center;
+	    align-content: flex-start;
+		}
+		.Firendship-connection .first{
+			width: 95%;
+			height: 130px;
+			text-align: center;
+		}
+		.Firendship-connection .first h2{
+			font-family: 黑体;
+			font-size: 2.5em;
+			font-weight: bold;
+		}
+		.Firendship-connection .first h4{
+			color: #99999b;
+			font-size: 1.8em;
+		}
+		/* 第二部分  */
+		.Firendship-connection .second{
+			width: 92%;
+			height: 1465px;
+			background-color: white;
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+		}
+		/* 导航栏  */
+		.Firendship-connection .second .nav{
+			width: 100%;
+			height:330px;
+		  background-color: #fbfbfb;
+		  margin-bottom: 10px;
+		}
+		.Firendship-connection .second .nav ul{
+			list-style: none;
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-between;
+			align-content: space-around;
+			width: 100%;
+			height: 330px;
+		}
+		.Firendship-connection .second .nav ul>li{
+			width: 100%;
+			height: 40px;
+			cursor: pointer;
+			border-radius: 25px 25px 25px 25px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			border: 1px #E7E7E7 solid;
+			transition: 0.5s;
+		}
+		.Firendship-connection .second .nav ul>li span{
+			color: #666666;
+			font-size: 1.1em;
+		}
+		.Firendship-connection .second .nav ul .li{
+			background-color: #21C9BE;
+		}
+		.Firendship-connection .second .nav ul .li span{
+			color: white;
+		}
+		/* 主要部分  */
+	  .second .main{
+			width: 100%;
+			height: 1125px;
+			margin: 0px;
+		  padding: 0px;
+		}
+		.second .main ul{
+			width: 100%;
+			height: 1125px;
+			list-style: none;		
+		}
+	  .second .main>ul>li{
+	  	width: 100%;
+	  	height: 1125px;
+	  	display: none;
+	  }
+	   .second .main>ul>.tou{
+	  	display: block;
+	  }
+	  .second .main ul>li>ul{
+	  	width: 100%;
+	  	height: 1125px;
+	  	display: flex;
+	  	flex-wrap: wrap;
+	  	justify-content: space-between;
+	  	align-content: space-around;
+	  }
+	  .second .main ul>li>ul>li{
+	  	width: 100%;
+	  	height: 35px;
+	  	border-radius: 25px 25px 25px 25px;
+	  	border: 1px #e7e7e7 solid;
+	  	display: flex;
+	  	justify-content: center;
+	  	align-items: center;
+	  }
+	  .second .main ul>li>ul>li a{
+	  	text-decoration: none;
+	  	color: #666666;
+	  	font-size: 1em;
+	  }
+	    /* 底部  */
+		.footer{
+		 	width: 100%;
+		 	height: 560px;
+		 	background-color: #fbfbfb;
+		 	display: flex;
+		 	flex-wrap: wrap;
+	    justify-content: center;
+		}
+		.footer .footer-header{
+		  width: 95%;
+		  height: 510px;
+		}
+		.footer-header .box1{
+		  height: 180px;
+		}
+		.footer-header .box1 p{
+			font-family: 草书;
+		}
+		.footer-header .box2{
+			height: 140px;
+		}
+		.footer-header .box2 .about-us h3{
+			height: 40px;
+			width: 100%;
+			border-bottom: 1.5px lightgray solid;
+		}
+		.footer-header .box2 ul>li{
+			list-style: none;
+	    height: 30px;
+	    margin: 0px;
+	    padding: 0px;
+		}
+		.footer-header .box2 ul>li a{
+			text-decoration: none;
+			color: black;
+			font-family: 草书;
+		}
+		.footer-header .box2 ul>li a:hover{
+			color: #21C9BE;
+		}
+		.footer-header .box3{
+			height: 200px;
+		}
+		.footer-header .box3 .linggao-offical h3{
+			width: 100%;
+			height: 40px;
+			border-bottom: 1.5px lightgray solid;
+		}
+		.footer-header .box3 ul{
+	    width: 100%;
+	    height: 115px;
+	    display: flex;
+		}
+		.footer-header .box3  li{
+			margin: 0px;
+			padding: 0px;
+	    list-style: none;
+		  height: 90px;
+		  
+		}
+	  .footer .footer-down{
+		  width:100%;
+		  height: 50px;
+		  background-color: black;
+		  display: flex;
+		  justify-content: center;
+		  align-items: center;
+		}
+		.footer .footer-down p{
+		  font-size: 13px;
+		  color: #999999;
+		  margin-top: 5px;
+		} 	
+}
+ 
+ /* iphone6、6p  */
+@media screen and (max-width: 479px) and (min-width:321px){
+	 /* 头部  */
+	 .header{
+	 	   justify-content: space-around;
+	 }
+	 #qqtupian img{
+	 	   width:25px;
+	 	   height:25px;
+	 }
+	 .email,.telephone{
+	 	   display: none;
+	 }
+	   /* 导航栏部分*/
+		.nav-menu{
+	 		 width:100%;
+			 display:flex;
+			 flex-wrap: nowrap;
+		   background-color: lightgray;
+		   height: 68px;
+		   position: fixed;
+		   z-index: 9;
+		}
+	  .nav-menu .img{
+	  	 width: 25%;
+	  	 height: 68px;
+	  	 margin-left: 10px;
+	  	 display: flex;
+	  	 justify-content: center;
+	  	 align-items: center;
+	  }
+	  .nav-menu img{
+	  	 width: 100%px;
+	  	 height: 60px;
+	  }
+		  /* 选项卡  */
+		#nav{
+			 width: 85%;
+			 background-color:lightgray;
+			 border:1px lightgray solid;
+			 margin-top: 17px;
+		}
+		#example-navbar-collapse li{
+	  	 cursor:pointer;
+	  }
+	  #example-navbar-collapse ul{
+       margin-top: 0;
+	  	 background-color: lightgray;
+	  }
+	 
+   /* 轮播图  */
+   .slider{
+   	  position: relative;
+   	  height:260px;
+   	  top:-45px;
+   }
+   .slider img{
+	   width:100%;
+	   height:260px;
+   } 
+   /* 左右箭头 */
+ 	 .arrow{
+		 display: block;
+	}
+	 .arrow-left,.arrow-right {
+		 width: 0px;                                                   
+		 height: 0px;                                                                     
+		 position: absolute;
+		 top:70%;
+		 font-size: 50px; 
+		  }
+	 .arrow-left {
+		  left: 5px;        
+		  }         
+	 .arrow-right {
+	    right: 30px;
+	    }
+	   /* 存放切换小图标的div */
+	 .slider .slider-dot { 
+		  width: 38%; 
+		  height: 8%;
+		  position: absolute;
+		  top: 285px; 
+		  left: 35%; 
+		  }
+	 .slider-i{
+		  display:inline-block;
+		  cursor: pointer;
+		  width: 15px;
+		  height: 15px;
+		  border-radius: 100%;
+		  background-color:lightgray;
+		  margin-left: 20px;
+		  float: left; 
+		  }
+	 .active {background-color: white;}   
+	 	  /* 高校名单 */
+		.list{
+			 position: absolute;
+			 width:100%;
+			 height: 450px;
+			 top:340px;
+			 display: flex;
+			 flex-wrap: wrap;
+			 justify-content: center;
+		}
+		.list ul {
+			 width: 92%;
+			 height: 450px;
+			 display: flex;
+			 flex-wrap: wrap;
+			 justify-content: space-between;
+			 align-items: center;
+			 list-style: none;
+		}
+		.list li{
+			 width: 27%;
+			 height: 95px;
+			 border-radius: 10%; 
+		}
+		.list img{
+			 width: 100%;
+			 height: 95px;
+			 border-radius: 10%;
+		}  
+		.list li:active{
+		   box-shadow: 5px 5px 5px grey;
+		}
+		.list li a{
+			outline:none;
+		}
+		#finally{
+			display: none;
+		}
+		/* 选项卡 */
+		.select-card{
+		 position: absolute;
+	   top: 790px;
+	   width: 100%;
+	   height: 150px;
+	   display: flex;
+	   justify-content: center;
+	}
+	  .select-card ul{
+	    width: 92%;
+	    height: 150px;
+	    display: flex;
+	    flex-wrap: wrap;
+	    justify-content: space-between;
+	  }
+	 /* 对ul下的li和a操作  */
+  .select-card ul>li{
+	   width: 47%;
+	   height: 50px;
+  }
+  .select-card ul>li span{
+  	 font-size: 1em;
+  }
+  /* 图片部分  */
+  .image{
+			width: 100%; 
+			position:absolute;
+			top: 940px;
+			height: 650px;
+		}
+	.image ul>li{
+		  width: 100%;
+		  height: 650px;
+		  display: flex;
+		  flex-wrap: wrap;  
+	}
+  .image ul>li>ul{
+  	  width: 100%;
+  	  height: 650px;
+  	  margin: auto;
+  	  display: flex;
+  	  flex-wrap: wrap;
+  	  justify-content: space-between;
+  	  align-content: space-around;
+  }
+	.image ul>li>ul>li{
+		  width: 48%;
+		  height: 160px;
+	}
+	.image ul>li>ul>li img{
+		  margin: 0px;
+		  padding: 0px;
+		  width: 100%;
+		  height: 160px;
+	}
+		/* 高考报考 */
+		.Tools-cabinet{
+			width: 100%;
+			height:750px;
+			position: absolute;
+			top: 1590px;
+			background-color:#fbfbfb;
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+		}
+		.Tools-cabinet .left{
+			display: none;
+		}
+		.middle .line1,.line2,.line3{
+			display: none;
+		}
+		.middle{
+			width: 92%;
+			height:200px;
+		}
+		.middle ul{
+			width:100%;
+			height:200px;
+			display: flex;
+			flex-wrap: wrap;
+			list-style: none;
+			align-content: space-around;
+		}
+		.middle ul>li{
+			width:100%;
+			height:40px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			border:1px lightgray solid;
+			border-radius: 20px 20px 20px 20px;
+		}
+		/* 中间li的css样式 */
+		.middle .li{
+			 background-color:#21C9BE;
+		}
+		.middle .li span{
+			 color:white;
+		}
+		.right{
+			 width: 92%;
+			 height:500px;
+		}
+		.right ul{
+			 display: flex;
+			 width: 100%;
+			 height: 500px;
+			 list-style: none;
+		}
+		.right ul>li{
+			 width:100%;
+			 height:500px;
+			 display: none;
+		}
+		.right ul .first{
+			 display: block;
+		}
+		.right ul>li>ul{
+			 width:100%;
+			 height:500px;
+			 list-style: none;
+			 display: flex;
+			 justify-content: space-around;
+			 flex-wrap: wrap;
+		}
+		.right ul>li>ul>li{
+			 cursor: pointer;
+			 width:22%;
+			 height:30px;
+			 border:1px #e7e7e7 solid;
+			 border-radius:10px 10px 10px 10px;
+			 display: flex;
+			 align-items: center;
+			 justify-content: center;
+		}
+		.right #secoend ul{
+			 width:100%;
+			 height:470px;
+		}
+		.right #secoend li{
+			 width:50%;
+			 height:30px;
+		}
+		/* 模态框 */
+		.right .first .modal-body{
+			 width:100%;
+			 height:400px;
+		}
+		.right .first .modal-body ul{
+			 width:100%;
+			 height:400px;
+			 display: flex;
+			 flex-wrap: wrap;
+       justify-content: space-around;
+		}
+		.right .first .modal-body ul>li{
+			 width:45%;
+			 height:30px;
+		   border:1px lightgray solid;
+		   border-radius: 15px 15px 15px 15px;
+		   display: flex;
+		   justify-content: center;
+		   align-items: center;
+		}
+		.right .first .modal-body ul #ever-year{
+			 display: none;
+		}
+		.right .first .modal-body ul>li a{
+			 text-decoration: none;
+			 font-size:1.5rem;
+			 font-family: 宋体;
+			 color:black;
+		}
+		/* 高考备考 */
+		.For-reference{
+			width:100%;
+			height:1250px;
+			background-color:#fbfbfb;
+			margin-top: 2020px;
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+			align-content: flex-start;
+		} 
+		/* 头部 */
+		.For-reference .tips{
+			width:99%;
+			height:100px;
+      text-align: center;
+      margin-bottom: 10px;
+		}
+		.For-reference .tips h2{
+			font-family: 黑体;
+			font-size: 2.5em;
+			font-weight: bold;
+			
+		}
+		.For-reference .tips h4{
+			font-size: 1.4em;
+			color: #99999b;
+		}
+		/* 导航栏 */
+		.For-reference .topic{
+			width:95%;
+			height: 1120px;
+		  background-color: white;
+		  display: flex;
+		  flex-wrap: wrap;
+		  justify-content: center;
+		  align-content: flex-start;
+		}
+		.topic .ON1{
+			width: 100%;
+			height:200px;
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+			margin-bottom: 5px;
+		}
+		.topic .ON1 ul{
+			width: 100%;
+			height:200px;
+			list-style: none;
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+      align-content: space-around;
+		}
+		.topic .ON1 ul .li{
+			background-color: #21C9BE;
+		}
+		.topic .ON1 ul .li span{
+			color: white;
+		}
+		.topic .ON1 ul li{
+			width: 100%;
+			height:40px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			cursor: pointer;
+			border-radius: 25px 25px 25px 25px;
+			transition: 0.5s;
+			border: 1px #e7e7e7 solid;
+		}
+		.topic .ON1 li span{
+			color: black;
+			font-family: 华文中宋;
+			font-size: 1.5rem;
+		}
+		/* 第二 */
+		.topic .second{
+			width: 100%;
+			height: 920px;
+			background-color: #fbfbfb;
+		}
+		.topic .second ul{
+			display: flex;
+			width: 100%;
+			height: 920px;
+			list-style: none;
+		}
+		.topic .second ul li{
+			width: 100%;
+			height: 920px;
+		}
+		.topic .second ul>li>ul{
+			display: flex;
+		  flex-wrap: wrap;
+			justify-content: space-around;
+			align-content: space-around;
+			width: 100%;
+			height: 920px;
+		}
+		.topic .second ul>li>ul .nav a{
+			color: #21C9BE;
+		}
+		.topic .second ul>li>ul>li{
+			width: 49%;
+			border-radius: 30px 30px 30px 30px;
+			height: 30px;
+			border: 1px #e7e7e7 solid;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+		.topic .second ul>li>ul>li a{
+			text-decoration: none;
+			color: black;
+		}
+		.topic .second ul>li{
+			display: none;
+		}
+		.topic .second ul .first{
+			display: block;
+		}
+		  /* 友情链接  */
+		.Firendship-connection{
+			width: 100%;
+			height: 1500px;
+			background-color: #fbfbfb;
+		  display: flex;
+		  flex-wrap: wrap;
+		  justify-content: center;
+	    align-content: flex-start;
+		}
+		.Firendship-connection .first{
+			width: 95%;
+			height: 130px;
+			text-align: center;
+		}
+		.Firendship-connection .first h2{
+			font-family: 黑体;
+			font-size: 2.5em;
+			font-weight: bold;
+		}
+		.Firendship-connection .first h4{
+			color: #99999b;
+			font-size: 1.8em;
+		}
+		/* 第二部分  */
+		.Firendship-connection .second{
+			width: 92%;
+			height: 1365px;
+			background-color: white;
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+			align-content: flex-start;
+		}
+		/* 导航栏  */
+		.Firendship-connection .second .nav{
+			width: 100%;
+			height:230px;
+		  background-color: #fbfbfb;
+		  margin-bottom: 10px;
+		}
+		.Firendship-connection .second .nav ul{
+			list-style: none;
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-between;
+			align-content: space-around;
+			width: 100%;
+			height: 230px;
+		}
+		.Firendship-connection .second .nav ul>li{
+			width: 45%;
+			height: 40px;
+			cursor: pointer;
+			border-radius: 25px 25px 25px 25px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			border: 1px #E7E7E7 solid;
+			transition: 0.5s;
+		}
+		.Firendship-connection .second .nav ul>li span{
+			color: #666666;
+			font-size: 1.1em;
+		}
+		.Firendship-connection .second .nav ul .li{
+			background-color: #21C9BE;
+		}
+		.Firendship-connection .second .nav ul .li span{
+			color: white;
+		}
+		/* 主要部分  */
+	  .second .main{
+			width: 100%;
+			height: 1125px;
+			margin: 0px;
+		  padding: 0px;
+		}
+		.second .main ul{
+			width: 100%;
+			height: 1125px;
+			list-style: none;		
+		}
+	  .second .main>ul>li{
+	  	width: 100%;
+	  	height: 1125px;
+	  	display: none;
+	  }
+	   .second .main>ul>.tou{
+	  	display: block;
+	  }
+	  .second .main ul>li>ul{
+	  	width: 100%;
+	  	height: 1125px;
+	  	display: flex;
+	  	flex-wrap: wrap;
+	  	justify-content: space-between;
+	  	align-content: space-around;
+	  }
+	  .second .main ul>li>ul>li{
+	  	width: 100%;
+	  	height: 35px;
+	  	border-radius: 25px 25px 25px 25px;
+	  	border: 1px #e7e7e7 solid;
+	  	display: flex;
+	  	justify-content: center;
+	  	align-items: center;
+	  }
+	  .second .main ul>li>ul>li a{
+	  	text-decoration: none;
+	  	color: #666666;
+	  	font-size: 1em;
+	  }
+	    /* 底部  */
+		.footer{
+		 	width: 100%;
+		 	height: 590px;
+		 	background-color: #fbfbfb;
+		 	display: flex;
+		 	flex-wrap: wrap;
+	    justify-content: center;
+		}
+		.footer .footer-header{
+		  width: 95%;
+		  height: 550px;
+		}
+		.footer-header .box1{
+		  height: 190px;
+		}
+		.footer-header .box1 p{
+			font-family: 草书;
+		}
+		.footer-header .box2{
+			height: 140px;
+		}
+		.footer-header .box2 .about-us h3{
+			height: 40px;
+			width: 100%;
+			border-bottom: 1.5px lightgray solid;
+		}
+		.footer-header .box2 ul>li{
+			list-style: none;
+	    height: 30px;
+	    margin: 0px;
+	    padding: 0px;
+		}
+		.footer-header .box2 ul>li a{
+			text-decoration: none;
+			color: black;
+			font-family: 草书;
+		}
+		.footer-header .box2 ul>li a:hover{
+			color: #21C9BE;
+		}
+		.footer-header .box3{
+			height: 200px;
+		}
+		.footer-header .box3 .linggao-offical h3{
+			width: 100%;
+			height: 40px;
+			border-bottom: 1.5px lightgray solid;
+		}
+		.footer-header .box3 ul{
+	    width: 100%;
+	    height: 115px;
+	    display: flex;
+		}
+		.footer-header .box3  li{
+			margin: 0px;
+			padding: 0px;
+	    list-style: none;
+		  height: 100px;
+		}
+	  .footer .footer-down{
+		  width:100%;
+		  height: 60px;
+		  background-color: black;
+		  display: flex;
+		  justify-content: center;
+		  align-items: center;
+		}
+		.footer .footer-down p{
+			margin-top: 10px;
+		  font-size: 16px;
+		  color: #999999;
+		} 	
+}
+
+/* ipad */
+@media only screen and (min-width: 480px) and (max-width: 767px){
+	 /* 头部  */
+	 #qqtupian img{
+	 	   width:35px;
+	 	   height:35px; 
+	 }
+	 .telephone,.email{
+       display: none;
+	 }
+     /* 导航栏部分*/
+	.nav-menu{
+	 		 width:100%;
+			 display:flex;
+			 flex-wrap: nowrap;
+		   background-color: lightgray;
+		   height: 68px;
+		   position: fixed;
+		   z-index: 9;
+	}
+	.nav-menu .img{
+	  	 width: 18%;
+	  	 height: 68px;
+	  	 margin-left: 15px;
+	  	 display: flex;
+	  	 justify-content: center;
+	  	 align-items: center;
+	}
+	.nav-menu img{
+	  	 width: 100%px;
+	  	 height: 60px;
+	}
+		  /* 选项卡  */
+  #nav{
+			 width: 85%;
+			 background-color:lightgray;
+			 border:1px lightgray solid;
+			 margin-top: 17px;
+	}
+	#example-navbar-collapse li{
+	  	 cursor:pointer;
+	  }
+	  #example-navbar-collapse ul{
+       margin-top: 0;
+	  	 background-color: lightgray;
+	  }
+   /* 轮播图  */
+   .slider{
+   	   position: absolute;
+   	   height:320px;
+   	   top:42px;
+   }
+   .slider img{
+	   width:100%;
+	   height:320px;
+   } 
+   /* 左右箭头 */
+	.arrow{
+		 display: block;
+	}
+	.arrow-left,.arrow-right {
+		 width: 0px;                                                   
+		 height: 0px;                                                                     
+		 position: absolute;
+		 top:55%;
+		 font-size: 50px; 
+	}
+	.arrow-left {
+		  left: 10px;        
+	}         
+	.arrow-right {
+	    right: 30px;
+	}
+	   /* 存放切换小图标的div */
+	.slider .slider-dot { 
+		  width: 38%; 
+		  height: 8%;
+		  position: absolute;
+		  top: 340px; 
+		  left: 40%; 
+	}
+	.slider-i{
+		  display:inline-block;
+		  cursor: pointer;
+		  width: 15px;
+		  height: 15px;
+		  border-radius: 100%;
+		  background-color:lightgray;
+		  margin-left: 20px;
+		  float: left; 
+	}
+	.active {background-color: white;} 
+	 /* 高校名单 */
+	.list{
+			 position: absolute;
+			 width:100%;
+			 height:220px;
+			 top:425px;
+	}
+	.list ul {
+			 width: 100%;
+			 height: 220px;
+			 display: flex;
+			 flex-wrap: wrap;
+			 justify-content: space-around;
+			 align-items: center;
+			 list-style: none;
+	}
+	.list li{
+			 width: 80px;
+			 height: 80px;
+			 display: flex;
+			 border-radius: 10%;
+			 margin-left:10px;
+	}
+	.list img{
+			 width:80px;
+			 height:80px;
+	}	  
+	.list li:active{
+		   box-shadow: 5px 5px 5px grey;
+	}
+	.list li a{
+			 outline:none;
+		}
+	/* 选项卡  */
+	.select-card{
+		 position: absolute;
+	   top:655px;
+	}
+	 /* 对ul下的li和a操作  */
+  .select-card ul>li{
+	   width: 21%;
+	   height: 50px;
+  }
+  .select-card ul>li span{
+  	 font-size: 1em;
+  }
+  /* 图片部分  */
+  .image{
+			width: 100%; 
+			position:absolute;
+			top: 720px;
+			height: 650px;
+		}
+	.image ul>li{
+		  width: 100%;
+		  height: 650px;
+		  display: flex;
+		  flex-wrap: wrap;  
+	}
+  .image ul>li>ul{
+  	  width: 100%;
+  	  height: 650px;
+  	  margin: auto;
+  	  display: flex;
+  	  flex-wrap: wrap;
+  	  justify-content: space-between;
+  	  align-content: space-around;
+  }
+	.image ul>li>ul>li{
+		  width: 45%;
+		  height: 180px;
+	}
+	.image ul>li>ul>li img{
+		  margin: 0px;
+		  padding: 0px;
+		  width: 100%;
+		  height: 180px;
+	}
+		 /* 高考报考 */
+	.Tools-cabinet{
+		width:100%;
+		height:1000px;
+		position: absolute;
+		top:1420px;
+		background-color:#fbfbfb;
+	}
+	.Tools-cabinet .left{
+		display: block;
+		width:100%;
+		height:280px;
+	}
+	.Tools-cabinet .left img{
+		width:100%;
+		height:280px;
+	}
+	.middle .line1,.line2,.line3{
+		display: none;
+	}
+	.middle{
+		width:100%;
+		height:200px;
+	}
+	.middle ul{
+	  width:100%;
+		height:200px;
+		display: flex;
+		flex-wrap: wrap;
+		list-style: none;
+		justify-content: center;
+		align-content: space-around;
+	}
+	.middle ul>li{
+		width:92%;
+		height:40px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		border:1px lightgray solid;
+		border-radius: 20px 20px 20px 20px;
+	}
+		/* 中间li的css样式 */
+	.middle .li{
+		background-color:#21C9BE;
+	}
+	.middle .li span{
+		color:white;
+	}
+	.right{
+		width:100%;
+		height:520px;
+	}
+	.right ul{
+	  display: flex;
+		width:100%;
+		height:520px;
+		list-style: none;
+		justify-content: center;
+	}
+	.right ul>li{
+		width:95%;
+		height:520px;
+		display: none;
+	}
+	.right ul .first{
+		display: block;
+	}
+	.right ul>li>ul{
+		width:100%;
+		height:520px;
+	  list-style: none;
+		display: flex;
+		justify-content: space-around;
+		align-content: space-around;
+		flex-wrap: wrap;
+	}
+	.right ul>li>ul>li{
+		cursor: pointer;
+		width:22%;
+		height:30px;
+		border:1px #e7e7e7 solid;
+		border-radius:10px 10px 10px 10px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+	.right #secoend ul{
+		width:100%;
+		height:520px;
+		display: flex;
+  }
+	.right #secoend li{
+		width:45%;
+		height:30px;
+	}
+		/* 模态框 */
+	.right .first .modal-body{
+		width:100%;
+		height:400px;
+	}
+	.right .first .modal-body ul{
+		width:100%;
+		height:400px;
+	  display: flex;
+		flex-wrap: wrap;
+    justify-content: space-around;
+	}
+	.right .first .modal-body ul>li{
+		width:40%;
+		height:30px;
+		border:1px lightgray solid;
+		border-radius: 25px 25px 25px 25px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	.right .first .modal-body ul #ever-year{
+		display: none;
+	}
+  .right .first .modal-body ul>li a{
+		text-decoration: none;
+		font-size:1.5rem;
+		font-family: 宋体;
+		color:black;
+	}	
+	   /* 高考备考 */
+	.For-reference{
+		width:100%;
+		height:1250px;
+		background-color:#fbfbfb;
+		margin-top:2370px;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		align-content: flex-start;
+	} 
+		/* 头部 */
+	.For-reference .tips{
+		width:100%;
+		height:100px;
+    text-align: center;
+    margin-bottom: 20px;
+	}
+	.For-reference .tips h2{
+		font-family: 黑体;
+		font-size: 3em;
+		font-weight: bold;
+	}
+	.For-reference .tips h4{
+		font-size: 1.7em;
+		color: #99999b;
+	}
+		/* 导航栏 */
+	.For-reference .topic{
+		width:92%;
+		height: 1130px;
+		background-color: white;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		align-content: flex-start;
+	}
+	.topic .ON1{
+			width: 100%;
+			height:200px;
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+			margin-bottom: 10px;
+		}
+		.topic .ON1 ul{
+			width: 100%;
+			height:200px;
+			list-style: none;
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+      align-content: space-around;
+		}
+		.topic .ON1 ul .li{
+			background-color: #21C9BE;
+		}
+		.topic .ON1 ul .li span{
+			color: white;
+		}
+		.topic .ON1 ul li{
+			width: 100%;
+			height:40px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			cursor: pointer;
+			border-radius: 25px 25px 25px 25px;
+			transition: 0.5s;
+			border: 1px #e7e7e7 solid;
+		}
+		.topic .ON1 li span{
+			color: black;
+			font-family: 华文中宋;
+			font-size: 1.5rem;
+		}
+		/* 第二 */
+		.topic .second{
+			width: 100%;
+			height: 920px;
+			background-color: #fbfbfb;
+		}
+		.topic .second ul{
+			display: flex;
+			width: 100%;
+			height: 920px;
+			list-style: none;
+		}
+		.topic .second ul li{
+			width: 100%;
+			height: 920px;
+		}
+		.topic .second ul>li>ul{
+			display: flex;
+		  flex-wrap: wrap;
+			justify-content: space-around;
+			align-content: space-around;
+			width: 100%;
+			height: 920px;
+		}
+		.topic .second ul>li>ul .nav a{
+			color: #21C9BE;
+		}
+		.topic .second ul>li>ul>li{
+			width: 30%;
+			border-radius: 30px 30px 30px 30px;
+			height: 30px;
+			border: 1px #e7e7e7 solid;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+		.topic .second ul>li>ul>li a{
+			text-decoration: none;
+			color: black;
+		}
+		.topic .second ul>li{
+			display: none;
+		}
+		.topic .second ul .first{
+			display: block;
+		}
+		  	/* 友情链接  */
+		.Firendship-connection{
+			width: 100%;
+			height: 780px;
+			background-color: #fbfbfb;
+		  display: flex;
+		  flex-wrap: wrap;
+		  justify-content: center;
+		}
+		.Firendship-connection .first{
+			width: 95%;
+			height: 130px;
+			text-align: center;
+			font-family: 华文中宋;
+		}
+		.Firendship-connection .first h2{
+			font-family: 黑体;
+			font-size: 3.1em;
+			font-weight: bold;
+		}
+		.Firendship-connection .first h4{
+			color: #99999b;
+			font-size: 2.5em;
+		}
+		/* 第二部分  */
+		.Firendship-connection .second{
+			width: 92%;
+			height: 600px;
+			background-color: white;
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+		}
+		/* 导航栏  */
+		.Firendship-connection .second .nav{
+			width: 100%;
+			height:140px;
+		  background-color: #fbfbfb;
+		}
+		.Firendship-connection .second .nav ul{
+			list-style: none;
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-around;
+			align-content: space-around;
+			width: 100%;
+			height: 140px;
+		}
+		.Firendship-connection .second .nav ul>li{
+			width: 32%;
+			height: 40px;
+			cursor: pointer;
+			border-radius: 25px 25px 25px 25px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			border: 1px #E7E7E7 solid;
+			transition: 0.5s;
+		}
+		.Firendship-connection .second .nav ul>li span{
+			color: #666666;
+			font-size: 1.1em;
+		}
+		.Firendship-connection .second .nav ul .li{
+			background-color: #21C9BE;
+		}
+		.Firendship-connection .second .nav ul .li span{
+			color: white;
+		}
+		/* 主要部分  */
+	  .second .main{
+			width: 100%;
+			height: 450px;
+			margin: 0px;
+		  padding: 0px;
+		}
+		 .second .main ul{
+			width: 100%;
+			height: 450px;
+			list-style: none;		
+		}
+	   .second .main>ul>li{
+	  	width: 100%;
+	  	height: 450px;
+	  	display: none;
+	  }
+	   .second .main>ul>.tou{
+	  	display: block;
+	  }
+	   .second .main ul>li>ul{
+	  	width: 100%;
+	  	height: 450px;
+	  	display: flex;
+	  	flex-wrap: wrap;
+	  	justify-content: space-around;
+	  	align-content: space-around;
+	  }
+	  .second .main ul>li>ul>li{
+	  	width: 48%;
+	  	height: 30px;
+	  	border-radius: 25px 25px 25px 25px;
+	  	border: 1px #e7e7e7 solid;
+	  	display: flex;
+	  	justify-content: center;
+	  	align-items: center;
+	  }
+	  .second .main ul>li>ul>li a{
+	  	text-decoration: none;
+	  	color: #666666;
+	  	font-size: 1em;
+	  }
+	    /* 底部  */
+		.footer{
+		 	width: 100%;
+		 	height: 550px;
+		 	background-color: #fbfbfb;
+		 	display: flex;
+		 	flex-wrap: wrap;
+	    justify-content: center;
+		}
+		.footer .footer-header{
+		  width: 95%;
+		  height: 500px;
+		}
+		.footer-header .box1{
+		  height: 170px;
+
+		}
+		.footer-header .box1 p{
+			font-family: 草书;
+		}
+		.footer-header .box2{
+			height: 140px;
+		}
+		.footer-header .box2 .about-us h3{
+			height: 40px;
+			width: 100%;
+			border-bottom: 1.5px lightgray solid;
+		}
+		.footer-header .box2 ul>li{
+			list-style: none;
+	    height: 30px;
+	    margin: 0px;
+	    padding: 0px;
+		}
+		.footer-header .box2 ul>li a{
+			text-decoration: none;
+			color: black;
+			font-family: 草书;
+		}
+		.footer-header .box2 ul>li a:hover{
+			color: #21C9BE;
+		}
+		.footer-header .box3{
+			height: 190px;
+		}
+		.footer-header .box3 .linggao-offical h3{
+			width: 100%;
+			height: 40px;
+			border-bottom: 1.5px lightgray solid;
+		}
+		.footer-header .box3 ul{
+	    width: 100%;
+	    height: 115px;
+	    display: flex;
+		}
+		.footer-header .box3  li{
+			margin: 0px;
+			padding: 0px;
+	    list-style: none;
+		  height: 90px;
+		}
+	  .footer .footer-down{
+		  width:100%;
+		  height: 50px;
+		  background-color: black;
+		  display: flex;
+		  justify-content: center;
+		  align-items: center;
+		}
+		.footer .footer-down p{
+		  font-size: 17px;
+		  margin-top: 10px;
+		  color: #999999;
+		}    
+}    
+     
+/* 小型设备*/
+@media screen and (min-width: 768px){
+	  /* 头部  */
+	  #qqtupian img{
+	   	  width:35px;
+	   	  height:35px;
+	   }
+	  .caret{
+		    color:#21c9be;
+	   }
+	  /* 导航栏部分*/
+		.nav-menu{
+	 		 width:100%;
+			 display:flex;
+			 flex-wrap: nowrap;
+		   background-color: lightgray;
+		   height: 68px;
+		   position: fixed;
+		   z-index: 999;
+		}
+	  .nav-menu .img{
+	  	 width: 12%;
+	  	 height: 68px;
+	  	 margin-left: 10px;
+	  	 display: flex;
+	  	 justify-content: center;
+	  	 align-items: center;
+	  }
+	  .nav-menu img{
+	  	 width: 100%px;
+	  	 height: 60px;
+	  }
+		  /* 选项卡  */
+		#nav{
+			 width: 100%;
+			 margin-top:15px;
+			 background-color:lightgray;
+			 border:1px lightgray solid;
+			 display: flex;
+			 justify-content: center;
+		}
+		#example-navbar-collapse li{
+	  	 cursor:pointer;
+	  }
+		.dropdown-submenu > a:after {
+		   display: block;
+		   float: right;
+		   border-width: 5px 0 5px 5px;
+		   border-left-color: #ccc;
+		   margin-top: 5px;
+		   margin-right: -10px;
+		}
+		.dropdown-submenu:hover > a:after {
+		   border-left-color: #21C9BE;
+		}
+
+   /* 轮播图  */
+		.slider{
+		   position: relative;
+		   height:380px;
+		   top:13px;
+		   width:100%;
+		}
+		.slider img{
+			 width:100%;
+			 height:420px;
+		} 
+		   /* 左右箭头 */
+		.arrow {
+			 display: none;
+		}
+		.slider:hover .arrow {
+			 display: block;
+		}
+		.arrow-left,.arrow-right {                                                                   
+			 position: absolute;
+			 top:50%;
+			 font-size: 70px; 
+		}
+		.arrow-left {
+			  left: 10px;        
+			  }         
+		.arrow-right {
+		    right: 10px;
+		    }
+		   /* 存放切换小图标的div */
+		.slider .slider-dot { 
+			  width: 38%; 
+			  height: 8%;
+			  position: absolute;
+			  top: 440px; 
+			  left: 45%; 
+			  }
+		.slider-i{
+			  width: 18px;
+			  height: 18px;
+			  border-radius: 100%;
+			  margin-left: 20px;
+			  float: left; 
+			  }
+	  .active {background-color: white;}
+		.list{
+			 position: absolute;
+			 width:100%;
+			 height:130px;
+			 top:550px;
+		}
+		.list ul {
+			 width: 100%;
+			 height: 130px;
+			 display: flex;
+			 flex-wrap: wrap;
+			 justify-content: space-around;
+			 align-items: center;
+			 list-style: none;
+		}
+		.list li{
+			 width: 70px;
+			 height: 70px;
+			 display: flex;
+			 border-radius: 10%;
+     	 transition:0.3s ease-in;
+		}
+		.list li:hover{
+			 transform:translate3d(0,-10px,0);
+		   box-shadow: 10px 10px 5px grey;
+		}
+		.list img{
+			 width:70px;
+			 height:70px;
+		}
+		.list li a{
+			outline:none;
+		}
+		/* 选项卡 */
+		.select-card{
+			 box-sizing: border-box;
+			 position: absolute;
+		   top:685px;
+		}
+		.image{
+			 position: absolute;
+		   top:770px;
+		}
+		/* 高考报考 */
+		.Tools-cabinet{
+			 width:100%;
+			 height:500px;
+			 position: absolute;
+			 top:1320px;
+			 display: flex;
+			 justify-content: space-around;
+			 align-items: center;
+		}
+	  .left img{
+	  	 width:90%;
+	  	 height:280px;
+	  }
+		 /* 中间部分  */
+		.middle{
+			 width:20%;
+			 height:80%;
+			 position: relative;
+			 left:-40px;
+		}
+		/* 横线  */
+		.middle .line1{
+			 width:100%;
+			 height:1.5px;
+			 background-color:lightgray;
+			 position: relative;
+			 top:67px;
+			 left:-30px;
+		}
+		.middle .line2{
+			 width:100%;
+			 height:1.5px;
+			 background-color:lightgray;
+			 position: relative;
+			 top:198px;
+			 left:-30px;
+		}
+		.middle .line3{
+			 width:100%;
+			 height:1.5px;
+			 background-color:lightgray;
+			 position: relative;
+			 top:325px;
+			 left:-30px;
+		}
+		.middle ul{
+			 height: 80%;
+			 list-style: none;
+			 display: flex;
+		   flex-wrap: wrap;
+		   align-items: center;
+		
+		}
+		.middle ul>li{
+			 display: flex;
+			 justify-content: center;
+			 align-items:center;
+			 border:1.5px #e7e7e7 solid;
+			 border-radius: 20px 20px 20px 20px;
+			 height: 40px;
+			 width: 100%;
+			 margin:45px auto;
+			 background-color:white;
+			 position: relative;
+			 left:1px;
+			 transition: all 0.2s linear 0s;
+			 cursor: pointer;
+		}
+		.middle ul li>span{
+			color:black;
+			font-family: 宋体;
+			font-size:1.5rem;
+		  
+		}
+		  /* 中间li的css样式 */
+		.middle .li{
+			 position: relative;
+			 left:50px;
+			 background-color:#21C9BE;
+		}
+		.middle .li span{
+			 color:white;
+		}
+		 /* 当鼠标移动至li处时 */
+		.middle ul li:hover{
+			 position: relative;
+			 left:50px;
+			 background-color: #21C9BE;
+		}
+		.middle ul>li:hover span{
+			 color:white;
+		}
+		.right{
+			 width:35%;
+			 height:400px;
+		}
+		.right ul{
+			 display: flex;
+			 width:100%;
+			 height:400px;
+			 list-style: none;
+		}
+		.right ul>li{
+			 width:100%;
+			 height:400px;
+			 display: none;
+		}
+		.right ul .first{
+			 display: block;
+		}
+		.right ul>li>ul{
+			 width:100%;
+			 height:400px;
+			 list-style: none;
+			 display: flex;
+			 justify-content: space-around;
+			 flex-wrap: wrap;
+		}
+		.right ul>li>ul>li{
+			 cursor: pointer;
+			 width:22%;
+			 height:30px;
+			 border:1px #e7e7e7 solid;
+			 border-radius:10px 10px 10px 10px;
+			 display: flex;
+			 align-items: center;
+			 justify-content: center;
+		}
+			.right #secoend ul{
+				 width:100%;
+				 height:400px;
+				 display: flex;
+			}
+			.right #secoend li{
+				 width:40%;
+				 height:25px;
+			}
+		/* 模态框 */
+		.right .first #myModal{
+			 width:100%;
+		}
+		.right .first .modal-body ul{
+			 width:100%;
+			 height:300px;
+			 display: flex;
+			 flex-wrap: wrap;
+			 justify-content: space-around;
+			 align-items: center;
+		}
+		.right .first .modal-body ul>li{
+			 width:30%;
+			 height:35px;
+		   border:1px lightgray solid;
+		   border-radius: 15px 15px 15px 15px;
+		   display: flex;
+		   justify-content: center;
+		   align-items: center;
+		}
+		.right .first .modal-body ul>li:hover{
+			 background-color:#21C9BE;
+		}
+		.right .first .modal-body ul>li:hover a{
+			 color:white;
+		}
+		.right .first .modal-body ul>li a{
+			 text-decoration: none;
+			 font-size:1.5rem;
+			 font-family: 宋体;
+			 color:black;
+		}
+		/* 高考备考 */
+		.For-reference{
+			width:100%;
+			height:770px;
+			background-color:#fbfbfb;
+			margin-top:1400px;
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+			align-content: space-around;
+		} 
+		/* 头部 */
+		.For-reference .tips{
+			width:95%;
+			height:120px;
+		  text-align: center;
+		}
+		.For-reference .tips h2{
+			font-family: 黑体;
+			font-size: 3.5em;
+			font-weight: bold;
+		}
+		.For-reference .tips h4{
+			color: #99999b;
+			font-size: 1.7em;
+		}
+		/* 导航栏  */
+		.For-reference .topic{
+			width:95%;
+			height:570px;
+		  background-color: white;
+		  display: flex;
+		  flex-wrap: wrap;
+		  justify-content: center;
+		  align-content: space-around;
+		  background-color: white;
+		}
+		.topic .ON1{
+			width: 60%;
+			height:50px;
+			border: 1px #E7E7E7 solid;
+			border-radius: 25px 25px 25px 25px;
+			display: flex;
+			justify-content: center;
+		}
+		.topic .ON1 ul{
+			width: 100%;
+			height:50px;
+			list-style: none;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+		.topic .ON1 ul .li{
+			background-color: #21C9BE;
+		}
+		.topic .ON1 ul .li span{
+			color: white;
+		}
+		.topic .ON1 ul .li:hover span{
+			color: white;
+		}
+		.topic .ON1 ul li:hover span{
+			color: #21C9BE;
+			transition: 0.5s;
+		}
+		.topic .ON1 ul li{
+			width: 50%;
+			height:50px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			cursor: pointer;
+			border-radius: 25px 25px 25px 25px;
+			transition: 0.5s;
+		}
+		.topic .ON1 li span{
+			color: black;
+			font-family: 华文中宋;
+			font-size: 1.5rem;
+		}
+		/* 第二 */
+		.topic .second{
+			width: 100%;
+			height: 500px;
+		}
+		.topic .second ul{
+			display: flex;
+			width: 100%;
+			height: 500px;
+			list-style: none;
+		}
+		.topic .second ul li{
+			width: 100%;
+			height: 500px;
+		}
+		.topic .second ul>li>ul{
+			display: flex;
+		  flex-wrap: wrap;
+			justify-content: space-around;
+			align-content: space-around;
+			width: 100%;
+			height: 500px;
+		}
+		.topic .second ul>li>ul .nav a{
+			color: #21C9BE;
+		}
+		.topic .second ul>li>ul>li{
+			width: 15%;
+			border-radius: 30px 30px 30px 30px;
+			height: 30px;
+			border: 1px #e7e7e7 solid;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+		.topic .second #two ul>li{
+			width:15%;
+		}
+		.topic .second ul>li>ul>li a{
+			text-decoration: none;
+			color: black;
+		}
+		.topic .second ul>li{
+			display: none;
+		}
+		.topic .second ul .first{
+			display: block;
+		}
+			/* 友情链接  */
+		.Firendship-connection{
+			width: 100%;
+			height: 680px;
+			background-color: #fbfbfb;
+		  display: flex;
+		  flex-wrap: wrap;
+		  justify-content: center;
+		}
+		.Firendship-connection .first{
+			width: 95%;
+			height: 130px;
+			text-align: center;
+			font-family: 黑体;
+		}
+		.Firendship-connection .first h2{
+			font-family: 黑体;
+			font-size: 3em;
+			font-weight: bold;
+		}
+		.Firendship-connection .first h4{
+			color: #99999b;
+			font-size: 2.5em;
+		}
+		/* 第二部分  */
+		.Firendship-connection .second{
+			width: 100%;
+			height: 500px;
+			background-color: white;
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+	    align-content: space-around;
+		}
+		/* 导航栏  */
+		.Firendship-connection .second .nav{
+			width: 100%;
+			height:50px;
+			border: 1px #E7E7E7 solid;
+			border-radius: 25px 25px 25px 25px;
+		}
+		.Firendship-connection .second .nav ul{
+			list-style: none;
+			display: flex;
+			width: 100%;
+			height: 50px;
+		}
+		.Firendship-connection .second .nav ul>li{
+			width: 20%;
+			height: 50px;
+			cursor: pointer;
+			border-radius: 25px 25px 25px 25px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			transition: 0.5s;
+		}
+		.Firendship-connection .second .nav ul>li span{
+			color: #666666;
+			font-size: 1.1em;
+		}
+		.second .nav ul>li:hover span{
+			color: #21C9BE;
+		}
+		.Firendship-connection .second .nav ul .li{
+			background-color: #21C9BE;
+		}
+		.Firendship-connection .second .nav ul .li span{
+			color: white;
+		}
+		/* 主要部分  */
+	  .second .main{
+			width: 100%;
+			height: 400px;
+			margin: 0px;
+		  padding: 0px;	
+		}
+		 .second .main ul{
+			width: 100%;
+			height: 400px;
+			list-style: none;		
+		}
+	   .second .main>ul>li{
+	  	width: 100%;
+	  	height: 400px;
+	  	display: none;
+	  }
+	   .second .main>ul>.tou{
+	  	display: block;
+	  }
+	   .second .main ul>li>ul{
+	  	width: 100%;
+	  	height: 400px;
+	  	display: flex;
+	  	flex-wrap: wrap;
+	  	justify-content: space-between;
+	  	align-content: space-around;
+	  }
+	  .second .main ul>li>ul>li{
+	  	width: 31%;
+	  	height: 35px;
+	  	border-radius: 25px 25px 25px 25px;
+	  	border: 1px #e7e7e7 solid;
+	  	display: flex;
+	  	justify-content: center;
+	  	align-items: center;
+	  }
+	  .second .main ul>li>ul>li:hover{
+	  	background-color: #21c9be;
+	  	transition: 0.3s;
+	  }
+	  .second .main ul>li>ul>li:hover a{
+	  	color: white;
+	  	transition: 0.3s;
+	  }
+	  .second .main ul>li>ul>li a{
+	  	text-decoration: none;
+	  	color: #666666;
+	  	font-size: 1em;
+	  }
+	    /* 底部  */
+		.footer{
+		 	width: 100%;
+		 	height: 270px;
+		 	background-color: #fbfbfb;
+		 	display: flex;
+		 	flex-wrap: wrap;
+	    justify-content: center;
+		}
+		.footer .footer-header{
+		  width: 95%;
+		  height: 220px;
+		}
+		.footer-header .box1{
+		  height: 220px;
+		}
+		.footer-header .box1 p{
+			font-family: 草书;
+		}
+		.footer-header .box2{
+			height: 220px;
+		}
+		.footer-header .box2 .about-us h3{
+			height: 40px;
+			width: 100%;
+			border-bottom: 1.5px lightgray solid;
+		}
+		.footer-header .box2 ul>li{
+			list-style: none;
+	    height: 30px;
+	    margin: 0px;
+	    padding: 0px;
+		}
+		.footer-header .box2 ul>li a{
+			text-decoration: none;
+			color: black;
+			font-family: 草书;
+		}
+		.footer-header .box2 ul>li a:hover{
+			color: #21C9BE;
+		}
+		.footer-header .box3{
+			height: 220px;
+		}
+		.footer-header .box3 .linggao-offical h3{
+			width: 100%;
+			height: 40px;
+			border-bottom: 1.5px lightgray solid;
+		}
+		.footer-header .box3 ul{
+	    width: 100%;
+	    height: 110px;
+	    display: flex;
+		}
+		.footer-header .box3  li{
+			margin: 0px;
+			padding: 0px;
+	    list-style: none;
+		  height: 90px;
+		}
+	  .footer .footer-down{
+		  width:100%;
+		  height: 50px;
+		  background-color: black;
+		  display: flex;
+		  justify-content: center;
+		  align-items: center;
+		}
+		.footer .footer-down p{
+		  font-size: 17px;
+		  color: #999999;
+		} 
+		   		  
+}
+
+/* 中等屏幕(电脑)  */
+@media screen and (min-width: 992px){
+	 #qqtupian img{
+	 	  width:35px;
+	 	  height:35px;
+	 }
+	 
+ /* 导航栏部分*/
+	.nav-menu{
+ 		 width:100%;
+		 display:flex;
+		 flex-wrap: nowrap;
+	   background-color: lightgray;
+	   height: 68px;
+	   position: fixed;
+	   z-index: 999;
+	}
+  .nav-menu .img{
+  	 width: 8%;
+  	 height: 68px;
+  	 margin-left: 50px;
+  	 display: flex;
+  	 justify-content: center;
+  	 align-items: center;
+  }
+  .nav-menu img{
+  	 width: 100px;
+  	 height: 60px;
+  }
+	  /* 选项卡  */
+	#nav{
+		 width: 75%;
+		 margin-top:15px;
+		 background-color:lightgray;
+		 border:1px lightgray solid;
+		 display: flex;
+		 justify-content: center;
+		 
+	}
+	#example-navbar-collapse li{
+  	 cursor:pointer;
+  }
+	.dropdown-submenu > a:after {
+	   display: block;
+	   float: right;
+	   border-width: 5px 0 5px 5px;
+	   border-left-color: #ccc;
+	   margin-top: 5px;
+	   margin-right: -10px;
+	}
+	.dropdown-submenu:hover > a:after {
+	   border-left-color: #21C9BE;
+	}
+
+   /* 轮播图  */
+   .slider{
+   	  height:500px;
+   	  top:66px;
+   }
+   .slider img{
+   	  margin-top:-57px;
+   	  height:500px;  
+   }
+   .slider:hover .arrow{
+   	  display: block;
+   } 
+   	 /* 左右箭头 */
+   .arrow-left,.arrow-right {                                                                        
+	    font-size: 90px;
+	    position:absolute;
+	    top:35%; 
+	  } 
+    /* 存放切换小图标的div */
+   .slider .slider-dot { 
+	    position: absolute;
+	    top: 90%; 
+	    left: 40%; 
+	  }
+   .slider-i{
+	    width: 18px;
+	    height: 18px;
+	    margin-top:15px;
+	    margin-left: 30px;
+	  }
+		.list{
+			position: absolute;
+			width:100%;
+			height:130px;
+			top:630px;
+		}
+		.list ul {
+			width: 100%;
+			height: 130px;
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-around;
+			align-items: center;
+			list-style: none;
+		}
+		.list li{
+			 width: 75px;
+			 height: 75px;
+			 display: flex;
+			 border-radius: 10%;
+     	 transition:0.3s ease-in;
+		}
+		.list li:hover{
+			 transform:translate3d(0,-10px,0);
+		   box-shadow: 10px 10px 5px grey;
+		}
+		.list img{
+			 width:75px;
+			 height:75px;
+		}	
+		.list li a{
+			outline:none;
+		}
+		/* 选项卡  */
+    .select-card{
+			width:100%;
+			height:55px;
+			position: absolute;
+		  top:770px;
+    }  
+		.image{
+			position: absolute;
+		  top:860px;
+		}
+		/* 高考报考 */
+		.Tools-cabinet{
+			 width:100%;
+			 height:500px;
+			 position: absolute;
+			 top:1420px;
+			 display: flex;
+			 justify-content: space-around;
+			 align-items: center;
+		}
+			/* 中间部分  */
+		.middle{
+			 width:20%;
+			 height:80%;
+			 position: relative;
+			 left:-50px;
+		}
+		/* 横线  */
+		.middle .line1{
+			 width:100%;
+			 height:1.5px;
+			 background-color:lightgray;
+			 position: relative;
+			 top:67px;
+			 left:-30px;
+		}
+		.middle .line2{
+			 width:100%;
+			 height:1.5px;
+			 background-color:lightgray;
+			 position: relative;
+			 top:198px;
+			 left:-30px;
+		}
+		.middle .line3{
+			 width:100%;
+			 height:1.5px;
+			 background-color:lightgray;
+			 position: relative;
+			 top:325px;
+			 left:-30px;
+		}
+		.middle ul{
+			 height: 80%;
+			 list-style: none;
+			 display: flex;
+		   flex-wrap: wrap;
+		   align-items: center;
+		
+		}
+		.middle ul>li{
+			 display: flex;
+			 justify-content: center;
+			 align-items:center;
+			 border:1.5px #e7e7e7 solid;
+			 border-radius: 20px 20px 20px 20px;
+			 height: 40px;
+			 width: 100%;
+			 margin:45px auto;
+			 background-color:white;
+			 position: relative;
+			 left:1px;
+			 transition: all 0.2s linear 0s;
+			 cursor: pointer;
+		}
+		.middle ul li>span{
+			color:black;
+			font-family: 宋体;
+			font-size:1.5rem;
+		  
+		}
+	  /* 中间li的css样式 */
+		.middle .li{
+			 position: relative;
+			 left:50px;
+			 background-color:#21C9BE;
+		}
+		.middle .li span{
+			 color:white;
+		}
+		/* 当鼠标移至li处时 */
+		.middle ul li:hover{
+			 position: relative;
+			 left:50px;
+			 background-color: #21C9BE;
+		}
+		.middle ul>li:hover span{
+			 color:white;
+		}
+	.right{
+		 width:35%;
+		 height:400px;
+	}
+	.right ul{
+		 display: flex;
+		 width:100%;
+		 height:400px;
+		 list-style: none;
+	}
+	.right ul>li{
+		 width:100%;
+		 height:400px;
+		 display: none;
+	}
+	.right ul .first{
+		 display: block;
+	}
+	.right ul>li>ul{
+		 width:100%;
+		 height:400px;
+		 list-style: none;
+		 display: flex;
+		 justify-content: space-around;
+		 flex-wrap: wrap;
+	}
+	.right ul>li>ul>li{
+		 cursor: pointer;
+		 width:22%;
+		 height:30px;
+		 border:1px #e7e7e7 solid;
+		 border-radius:10px 10px 10px 10px;
+		 display: flex;
+		 align-items: center;
+		 justify-content: center;
+	}
+	/* 模态框 */
+	.right .first #myModal{
+		 width:100%;
+	}
+	.right .first .modal-body ul{
+		 width:100%;
+		 height:300px;
+		 display: flex;
+		 flex-wrap: wrap;
+		 justify-content: space-around;
+		 align-items: center;
+	}
+	.right .first .modal-body ul>li{
+		 width:30%;
+		 height:35px;
+	   border:1px lightgray solid;
+	   border-radius: 15px 15px 15px 15px;
+	   display: flex;
+	   justify-content: center;
+	   align-items: center;
+	}
+	.right .first .modal-body ul>li:hover{
+		 background-color:#21C9BE;
+	}
+	.right .first .modal-body ul>li:hover a{
+		 color:white;
+	}
+	.right .first .modal-body ul>li a{
+		 text-decoration: none;
+		 font-size:1.5rem;
+		 font-family: 宋体;
+		 color:black;
+	}
+  		/* 高考备考 */
+		.For-reference{
+			width:100%;
+			height:770px;
+			background-color:#fbfbfb;
+			margin-top:1390px;
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+			align-content: space-around;
+		} 
+		/* 头部 */
+		.For-reference .tips{
+			width:95%;
+			height:120px;
+		  text-align: center;
+		}
+		.For-reference .tips h2{
+			font-family: 黑体;
+			font-size: 4em;
+			font-weight: bold;
+		}
+		.For-reference .tips h4{
+			color: #99999b;
+			font-size: 2em;
+		}
+		/* 导航栏  */
+		.For-reference .topic{
+			width:95%;
+			height:570px;
+		  background-color: white;
+		  display: flex;
+		  flex-wrap: wrap;
+		  justify-content: center;
+		  align-content: space-around;
+		  background-color: white;
+		}
+		.topic .ON1{
+			width: 70%;
+			height:50px;
+			border: 1px #E7E7E7 solid;
+			border-radius: 25px 25px 25px 25px;
+			display: flex;
+			justify-content: center;
+		}
+		.topic .ON1 ul{
+			width: 100%;
+			height:50px;
+			list-style: none;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+		.topic .ON1 ul .li{
+			background-color: #21C9BE;
+		}
+		.topic .ON1 ul .li span{
+			color: white;
+		}
+		.topic .ON1 ul .li:hover span{
+			color: white;
+		}
+		.topic .ON1 ul li:hover span{
+			color: #21C9BE;
+			transition: 0.5s;
+		}
+		.topic .ON1 ul li{
+			width: 100%;
+			height:50px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			cursor: pointer;
+			border-radius: 25px 25px 25px 25px;
+			transition: 0.5s;
+		}
+		.topic .ON1 li span{
+			color: black;
+			font-family: 华文中宋;
+			font-size: 1.5rem;
+		}
+		/* 第二 */
+		.topic .second{
+			width: 100%;
+			height: 500px;
+		}
+		.topic .second ul{
+			display: flex;
+			width: 100%;
+			height: 500px;
+			list-style: none;
+		}
+		.topic .second ul li{
+			width: 100%;
+			height: 500px;
+		}
+		.topic .second ul>li>ul{
+			display: flex;
+		  flex-wrap: wrap;
+			justify-content: space-around;
+			align-content: space-around;
+			width: 100%;
+			height: 500px;
+		}
+		.topic .second ul>li>ul .nav a{
+			color: #21C9BE;
+		}
+		.topic .second ul>li>ul>li{
+			width: 15%;
+			border-radius: 30px 30px 30px 30px;
+			height: 30px;
+			border: 1px #e7e7e7 solid;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+		.topic .second #two ul>li{
+			width:15%;
+		}
+		.topic .second ul>li>ul>li a{
+			text-decoration: none;
+			color: black;
+		}
+		.topic .second ul>li{
+			display: none;
+		}
+		.topic .second ul .first{
+			display: block;
+		}
+			/* 友情链接  */
+		.Firendship-connection{
+			width: 100%;
+			height: 680px;
+			background-color: #fbfbfb;
+		  display: flex;
+		  flex-wrap: wrap;
+		  justify-content: center;
+		}
+		.Firendship-connection .first{
+			width: 95%;
+			height: 130px;
+			text-align: center;
+			font-family: 华文中宋;
+		}
+		.Firendship-connection .first h2{
+			font-family: 华文中宋;
+			font-size: 3em;
+			font-weight: bold;
+		}
+		.Firendship-connection .first h4{
+			color: #99999b;
+			font-size: 2.5em;
+		}
+		/* 第二部分  */
+		.Firendship-connection .second{
+			width: 95%;
+			height: 500px;
+			background-color: white;
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+	    align-content: space-around;
+		}
+		/* 导航栏  */
+		.Firendship-connection .second .nav{
+			width: 90%;
+			height:50px;
+			border: 1px #E7E7E7 solid;
+			border-radius: 25px 25px 25px 25px;
+		}
+		.Firendship-connection .second .nav ul{
+			list-style: none;
+			display: flex;
+			width: 100%;
+			height: 50px;
+		}
+		.Firendship-connection .second .nav ul>li{
+			width: 20%;
+			height: 50px;
+			cursor: pointer;
+			border-radius: 25px 25px 25px 25px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			transition: 0.5s;
+		}
+		.Firendship-connection .second .nav ul>li span{
+			color: #666666;
+			font-size: 1.1em;
+		}
+		.second .nav ul>li:hover span{
+			color: #21C9BE;
+		}
+		.Firendship-connection .second .nav ul .li{
+			background-color: #21C9BE;
+		}
+		.Firendship-connection .second .nav ul .li span{
+			color: white;
+		}
+		/* 主要部分  */
+	  .second .main{
+			width: 100%;
+			height: 400px;
+			margin: 0px;
+		  padding: 0px;	
+		}
+		 .second .main ul{
+			width: 100%;
+			height: 400px;
+			list-style: none;		
+		}
+	   .second .main>ul>li{
+	  	width: 100%;
+	  	height: 400px;
+	  	display: none;
+	  }
+	   .second .main>ul>.tou{
+	  	display: block;
+	  }
+	   .second .main ul>li>ul{
+	  	width: 100%;
+	  	height: 400px;
+	  	display: flex;
+	  	flex-wrap: wrap;
+	  	justify-content: space-around;
+	  	align-content: space-around;
+	  }
+	  .second .main ul>li>ul>li{
+	  	width: 28%;
+	  	height: 30px;
+	  	border-radius: 25px 25px 25px 25px;
+	  	border: 1px #e7e7e7 solid;
+	  	display: flex;
+	  	justify-content: center;
+	  	align-items: center;
+	  }
+	  .second .main ul>li>ul>li:hover{
+	  	background-color: #21c9be;
+	  	transition: 0.3s;
+	  }
+	  .second .main ul>li>ul>li:hover a{
+	  	color: white;
+	  	transition: 0.3s;
+	  }
+	  .second .main ul>li>ul>li a{
+	  	text-decoration: none;
+	  	color: #666666;
+	  	font-size: 1em;
+	  }
+	    /* 底部  */
+		.footer{
+		 	width: 100%;
+		 	height: 250px;
+		 	background-color: #fbfbfb;
+		 	display: flex;
+		 	flex-wrap: wrap;
+	    justify-content: center;
+		}
+		.footer .footer-header{
+		  width: 95%;
+		  height: 200px;
+		}
+		.footer-header .box1{
+		  height: 200px;
+		}
+		.footer-header .box1 p{
+			font-family: 草书;
+		}
+		.footer-header .box2{
+			height: 200px;
+		}
+		.footer-header .box2 .about-us h3{
+			height: 40px;
+			width: 100%;
+			border-bottom: 1.5px lightgray solid;
+		}
+		.footer-header .box2 ul>li{
+			list-style: none;
+	    height: 30px;
+	    margin: 0px;
+	    padding: 0px;
+		}
+		.footer-header .box2 ul>li a{
+			text-decoration: none;
+			color: black;
+			font-family: 草书;
+		}
+		.footer-header .box2 ul>li a:hover{
+			color: #21C9BE;
+		}
+		.footer-header .box3{
+			height: 200px;
+		}
+		.footer-header .box3 .linggao-offical h3{
+			width: 100%;
+			height: 40px;
+			border-bottom: 1.5px lightgray solid;
+		}
+		.footer-header .box3 ul{
+	    width: 100%;
+	    height: 110px;
+	    display: flex;
+		}
+		.footer-header .box3  li{
+			margin: 0px;
+			padding: 0px;
+	    list-style: none;
+		  height: 90px;
+		}
+	  .footer .footer-down{
+		  width:100%;
+		  height: 50px;
+		  background-color: black;
+		  display: flex;
+		  justify-content: center;
+		  align-items: center;
+		}
+		.footer .footer-down p{
+		  font-size: 17px;
+		  color: #999999;
+		}  
+}
+
+/* 大屏幕  */
+@media only screen and (min-width: 1200px) {
+   /* 头部   */	
+   .header{
+   	 justify-content: space-around;
+   }
+   #qqtupian img{
+   	 width:35px;
+   	 height:35px;
+   	  
+   }
+   /* 导航栏部分*/
+	.nav-menu{
+ 		 width:100%;
+		 display:flex;
+		 flex-wrap: nowrap;
+	   background-color: lightgray;
+	   height: 68px;
+	   position: fixed;
+	   z-index: 999;
+	}
+  .nav-menu .img{
+  	 width: 8%;
+  	 height: 68px;
+  	 margin-left: 80px;
+  	 display: flex;
+  	 justify-content: center;
+  	 align-items: center;
+  }
+  .nav-menu img{
+  	 width: 100px;
+  	 height: 60px;
+  }
+	  /* 选项卡  */
+	#nav{
+		 width: 72%;
+		 margin-top:15px;
+		 background-color:lightgray;
+		 border:1px lightgray solid;
+		 display: flex;
+		 justify-content: center;
+		 position: relative;
+		 left: -100px;
+	}
+	#example-navbar-collapse li{
+  	 cursor:pointer;
+  }
+	.dropdown-submenu > a:after {
+	   display: block;
+	   float: right;
+	   border-width: 5px 0 5px 5px;
+	   border-left-color: #ccc;
+	   margin-top: 5px;
+	   margin-right: -10px;
+	}
+	.dropdown-submenu:hover > a:after {
+	   border-left-color: #21C9BE;
+	}
+
+   /* 轮播图 */
+  .slider{
+   	 position: absolute;
+     width:100%;
+   	 height:700px;
+  }
+  .slider img{
+	   width:100%;
+	   height:700px;
+  }  
+  .arrow {
+	   display: none;
+	 }
+  .slider:hover .arrow {
+	   display: block;
+	 }
+	 	 /* 左右箭头 */
+  .arrow-left,.arrow-right {                                                                       
+	   position: absolute;
+	   top:45%;
+	   font-size: 80px; 
+	  }      
+  .arrow-left {
+	   left: 10px;        
+	  }         
+  .arrow-right {
+     right:20px;
+    }
+      /* 存放切换小图标的div */
+  .slider .slider-dot { 
+	   position: absolute;
+	   top: 92%; 
+	   left: 45%; 
+	  }
+  .slider-i{
+	   width: 18px;
+	   height: 18px;
+	   margin-top:15px;
+	   margin-left: 30px;
+	  }
+	    /* 高校名单  */
+  .list{
+		 display: flex;
+		 position: absolute;
+		 width:100%;
+		 height:200px;
+		 top:765px;
+   }
+  .list ul {
+		 width: 100%;
+		 height: 200px;
+		 display: flex;
+		 list-style: none;
+		 align-items: center;
+		 justify-content: space-around;
+  }
+  .list li{
+		 transition:0.3s ease-in;
+		 width: 79px;
+		 height: 79px;
+		 outline:none; 
+  }
+  .list li:hover{
+		 transform:translate3d(0,-10px,0);
+	   box-shadow: 10px 10px 10px grey;
+  }
+  .list img{
+		 width:80px;
+		 height:80px;
+  }  
+	.list li a{
+		 outline:none;
+	}
+  /* 选项卡  */
+  .select-card{
+	   box-sizing: border-box;
+	   position: absolute;
+     top:965px;
+  }
+	/* 图片部分  */
+	.image{
+		 position: absolute;
+	   top:1060px;
+	}
+	/* 高考报考  */
+	.Tools-cabinet{
+		 width:100%;
+		 height:500px;
+		 position: absolute;
+		 top:1650px;
+		 display: flex;
+		 justify-content: space-around;
+		 align-items: center;
+	}
+	 /* 中间部分  */
+	.middle{
+		 width:20%;
+		 height:80%;
+		 position: relative;
+		 left:-100px;
+	}
+	/* 横线  */
+	.middle .line1{
+		 width:100%;
+		 height:1.5px;
+		 background-color:lightgray;
+		 position: relative;
+		 top:67px;
+		 left:-30px;
+	}
+	.middle .line2{
+		 width:100%;
+		 height:1.5px;
+		 background-color:lightgray;
+		 position: relative;
+		 top:198px;
+		 left:-30px;
+	}
+	.middle .line3{
+		 width:100%;
+		 height:1.5px;
+		 background-color:lightgray;
+		 position: relative;
+		 top:325px;
+		 left:-30px;
+	}
+	.middle ul{
+		 height: 80%;
+		 list-style: none;
+		 display: flex;
+	   flex-wrap: wrap;
+	   align-items: center;
+	
+	}
+	.middle ul>li{
+		 display: flex;
+		 justify-content: center;
+		 align-items:center;
+		 border:1.5px #e7e7e7 solid;
+		 border-radius: 20px 20px 20px 20px;
+		 height: 40px;
+		 width: 100%;
+		 margin:45px auto;
+		 background-color:white;
+		 position: relative;
+		 left:1px;
+		 transition: all 0.2s linear 0s;
+		 cursor: pointer;
+	}
+	.middle ul li>span{
+		color:black;
+		font-family: 宋体;
+		font-size:1.1em;
+	  
+	}
+	/* 中间li的css样式 */
+	.middle .li{
+		 position: relative;
+		 left:50px;
+		 background-color:#21C9BE;
+	}
+	.middle .li span{
+		 color:white;
+	}
+	  /* 当鼠标移至li处则弹出 */
+	.middle ul li:hover{
+		 position: relative;
+		 left:50px;
+		 background-color: #21C9BE;
+	}
+	.middle ul>li:hover span{
+		 color:white;
+	}
+	.right{
+		 width:35%;
+		 height:400px;
+	}
+	.right ul{
+		 display: flex;
+		 width:100%;
+		 height:400px;
+		 list-style: none;
+	}
+	.right ul>li{
+		 width:100%;
+		 height:400px;
+		 display: none;
+	}
+	.right ul .first{
+		 display: block;
+	}
+	.right ul>li>ul{
+		 width:100%;
+		 height:400px;
+		 list-style: none;
+		 display: flex;
+		 justify-content: space-around;
+		 flex-wrap: wrap;
+	}
+	.right ul>li>ul>li{
+		 cursor: pointer;
+		 width:22%;
+		 height:30px;
+		 border:1px #e7e7e7 solid;
+		 border-radius:10px 10px 10px 10px;
+		 display: flex;
+		 align-items: center;
+		 justify-content: center;
+	}
+	/* 模态框 */
+	.right .first #myModal{
+		 width:100%;
+	}
+	.right .first .modal-body ul{
+		 width:100%;
+		 height:300px;
+		 display: flex;
+		 flex-wrap: wrap;
+		 justify-content: space-around;
+		 align-items: center;
+	}
+	.right .first .modal-body ul>li{
+		 width:30%;
+		 height:35px;
+	   border:1px lightgray solid;
+	   border-radius: 15px 15px 15px 15px;
+	   display: flex;
+	   justify-content: center;
+	   align-items: center;
+	}
+	.right .first .modal-body ul>li:hover{
+		 background-color:#21C9BE;
+	}
+	.right .first .modal-body ul>li:hover a{
+		 color:white;
+	}
+	.right .first .modal-body ul>li a{
+		 text-decoration: none;
+		 font-size:1.5rem;
+		 font-family: 宋体;
+		 color:black;
+	}
+	/* 高考备考 */
+	.For-reference{
+		width:100%;
+		height:770px;
+		background-color:#fbfbfb;
+		margin-top:2130px;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		align-content: space-around;
+	} 
+	/* 头部 */
+	.For-reference .tips{
+		width:95%;
+		height:100px;
+	  text-align: center;
+	}
+	.For-reference .tips h2{
+		font-family: 黑体;
+		font-size: 3em;
+		font-weight: bold;
+	}
+	.For-reference .tips h4{
+		color: #99999b;
+	}
+	/* 第一部分 */
+	.For-reference .topic{
+		width:95%;
+		height:570px;
+	  background-color: white;
+	  display: flex;
+	  flex-wrap: wrap;
+	  justify-content: center;
+	  align-content: space-around;
+	}
+	.topic .ON1{
+		width: 60%;
+		height:50px;
+		border: 1px #E7E7E7 solid;
+		border-radius: 25px 25px 25px 25px;
+		display: flex;
+		justify-content: center;
+	}
+	.topic .ON1 ul{
+		width: 100%;
+		height:50px;
+		list-style: none;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	.topic .ON1 ul .li{
+		background-color: #21C9BE;
+	}
+	.topic .ON1 ul .li span{
+		color: white;
+	}
+	.topic .ON1 ul .li:hover span{
+		color: white;
+	}
+	.topic .ON1 ul li:hover span{
+		color: #21C9BE;
+		transition: 0.5s;
+	}
+	.topic .ON1 ul li{
+		width: 50%;
+		height:50px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		cursor: pointer;
+		border-radius: 25px 25px 25px 25px;
+		transition: 0.5s;
+	}
+	.topic .ON1 li span{
+		color: black;
+		font-family: 华文中宋;
+		font-size: 1.1em;
+	}
+	/* 第二 */
+	.topic .second{
+		width: 100%;
+		height: 450px;
+	}
+	.topic .second ul{
+		display: flex;
+		width: 100%;
+		height: 450px;
+		list-style: none;
+	}
+	.topic .second ul li{
+		width: 100%;
+		height: 450px;
+	}
+	.topic .second ul>li>ul{
+		display: flex;
+	  flex-wrap: wrap;
+		justify-content: space-around;
+		align-content: space-around;
+		width: 100%;
+		height: 450px;
+	}
+	.topic .second ul>li>ul .nav a{
+		color: #21C9BE;
+	}
+	.topic .second ul>li>ul>li{
+		width: 15%;
+		border-radius: 30px 30px 30px 30px;
+		height: 30px;
+		/*border: 1px #e7e7e7 solid;*/
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	.topic .second #two ul>li{
+		width:15%;
+	}
+	.topic .second ul>li>ul>li a{
+		text-decoration: none;
+		color: #666666;
+	}
+	.topic .second ul>li{
+		display: none;
+	}
+	.topic .second ul .first{
+		display: block;
+	}
+	/* 友情链接  */
+	.Firendship-connection{
+		width: 100%;
+		height: 680px;
+		background-color: #fbfbfb;
+	  display: flex;
+	  flex-wrap: wrap;
+	  justify-content: center;
+	}
+	.Firendship-connection .first{
+		width: 95%;
+		height: 130px;
+		text-align: center;
+		font-family: 黑体;
+	}
+	.Firendship-connection .first h2{
+		font-family: 黑体;
+		font-size: 3em;
+		font-weight: bold;
+	}
+	.Firendship-connection .first h4{
+		color: #99999b;
+		font-size: 2.5em;
+	}
+	/* 第二部分  */
+	.Firendship-connection .second{
+		width: 95%;
+		height: 500px;
+		background-color: white;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+    align-content: space-around;
+	}
+	/* 导航栏  */
+	.Firendship-connection .second .nav{
+		width: 80%;
+		height:50px;
+		border: 1px #E7E7E7 solid;
+		border-radius: 25px 25px 25px 25px;
+	}
+	.Firendship-connection .second .nav ul{
+		list-style: none;
+		display: flex;
+		width: 100%;
+		height: 50px;
+	}
+	.Firendship-connection .second .nav ul>li{
+		width: 20%;
+		height: 50px;
+		cursor: pointer;
+		border-radius: 25px 25px 25px 25px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		transition: 0.5s;
+	}
+	.Firendship-connection .second .nav ul>li span{
+		color: #666666;
+		font-size: 1.1em;
+	}
+	.second .nav ul>li:hover span{
+		color: #21C9BE;
+	}
+	.Firendship-connection .second .nav ul .li{
+		background-color: #21C9BE;
+	}
+	.Firendship-connection .second .nav ul .li span{
+		color: white;
+	}
+	/* 主要部分  */
+  .second .main{
+		width: 100%;
+		height: 400px;
+		margin: 0px;
+	  padding: 0px;	
+	}
+	 .second .main ul{
+		width: 100%;
+		height: 400px;
+		list-style: none;		
+	}
+   .second .main>ul>li{
+  	width: 100%;
+  	height: 400px;
+  	display: none;
+  }
+   .second .main>ul>.tou{
+  	display: block;
+  }
+   .second .main ul>li>ul{
+  	width: 100%;
+  	height: 400px;
+  	display: flex;
+  	flex-wrap: wrap;
+  	justify-content: space-between;
+  	align-content: space-around;
+  }
+  .second .main ul>li>ul>li{
+  	width: 28%;
+  	height: 30px;
+  	border-radius: 25px 25px 25px 25px;
+  	border: 1px #e7e7e7 solid;
+  	display: flex;
+  	justify-content: center;
+  	align-items: center;
+  }
+  .second .main ul>li>ul>li:hover{
+  	background-color: #21c9be;
+  	transition: 0.3s;
+  }
+  .second .main ul>li>ul>li:hover a{
+  	color: white;
+  	transition: 0.3s;
+  }
+  .second .main ul>li>ul>li a{
+  	text-decoration: none;
+  	color: #666666;
+  	font-size: 1em;
+  }
+    /* 底部  */
+	.footer{
+	 	width: 100%;
+	 	height: 250px;
+	 	background-color: #fbfbfb;
+	 	display: flex;
+	 	flex-wrap: wrap;
+    justify-content: center;
+	}
+	.footer .footer-header{
+	  width: 95%;
+	  height: 200px;
+	}
+	.footer-header .box1{
+	  height: 200px;
+	}
+	.footer-header .box1 p{
+		font-family: 草书;
+	}
+	.footer-header .box2{
+		height: 200px;
+	}
+	.footer-header .box2 .about-us h3{
+		height: 40px;
+		width: 100%;
+		border-bottom: 1.5px lightgray solid;
+	}
+	.footer-header .box2 ul>li{
+		list-style: none;
+    height: 30px;
+    margin: 0px;
+    padding: 0px;
+	}
+	.footer-header .box2 ul>li a{
+		text-decoration: none;
+		color: black;
+		font-family: 草书;
+	}
+	.footer-header .box2 ul>li a:hover{
+		color: #21C9BE;
+	}
+	.footer-header .box3{
+		height: 200px;
+	}
+	.footer-header .box3 .linggao-offical h3{
+		width: 100%;
+		height: 40px;
+		border-bottom: 1.5px lightgray solid;
+	}
+	.footer-header .box3 ul{
+    width: 100%;
+    height: 110px;
+    display: flex;
+	}
+	.footer-header .box3  li{
+		margin: 0px;
+		padding: 0px;
+    list-style: none;
+	  height: 90px;
+	}
+  .footer .footer-down{
+	  width:100%;
+	  height: 50px;
+	  background-color: black;
+	  display: flex;
+	  justify-content: center;
+	  align-items: center;
+	}
+	.footer .footer-down p{
+	  font-size: 17px;
+	  color: #999999;
+	}  
+}
